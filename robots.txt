@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://radiantblockchain.xyz/sitemap.txt
-Sitemap: https://radiantblockchain.xyz/sitemap.xml
+Sitemap: https://radiantblockchain.org/sitemap.txt
+Sitemap: https://radiantblockchain.org/sitemap.xml
