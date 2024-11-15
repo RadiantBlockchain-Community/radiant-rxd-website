@@ -1,57 +1,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
     <url>
-        <loc>https://radiantblockchain.xyz</loc>
+        <loc>https://radiantblockchain.org</loc>
         <lastmod>2024-11-14T08:08:08+00:00</lastmod>
         <priority>1.00</priority>
     </url>
     <url>
-        <loc>https://radiantblockchain.xyz/guides.html</loc>
+        <loc>https://radiantblockchain.org/guides.html</loc>
         <lastmod>2024-11-14T08:08:08+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://radiantblockchain.xyz/glyphs-guide.html</loc>
+        <loc>https://radiantblockchain.org/glyphs-guide.html</loc>
         <lastmod>2024-11-1408:08+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://radiantblockchain.xyz/glyphs-protocol-guide.html</loc>
+        <loc>https://radiantblockchain.org/glyphs-protocol-guide.html</loc>
         <lastmod>2024-11-14T08:08:08+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://radiantblockchain.xyz/rxd-brand-guide.html</loc>
+        <loc>https://radiantblockchain.org/rxd-brand-guide.html</loc>
         <lastmod>2024-11-14T08:08:08+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://radiantblockchain.xyz/links.html</loc>
+        <loc>https://radiantblockchain.org/links.html</loc>
         <lastmod>2024-11-14T08:08:08+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://radiantblockchain.xyz/node-network.html</loc>
+        <loc>https://radiantblockchain.org/node-network.html</loc>
         <lastmod>2024-11-14T08:08:08+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://radiantblockchain.xyz/participate.html</loc>
+        <loc>https://radiantblockchain.org/participate.html</loc>
         <lastmod>2024-11-14T08:08:08+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://radiantblockchain.xyz/initiatives.html</loc>
+        <loc>https://radiantblockchain.org/initiatives.html</loc>
         <lastmod>2024-11-14T08:08:08+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://radiantblockchain.xyz/ambassadors.html</loc>
+        <loc>https://radiantblockchain.org/ambassadors.html</loc>
         <lastmod>2024-11-14T08:08:08+00:00</lastmod>
         <priority>0.80</priority>
     </url>
         <url>
-        <loc>https://radiantblockchain.xyz/get-rxd.html</loc>
+        <loc>https://radiantblockchain.org/get-rxd.html</loc>
         <lastmod>2024-11-14T08:08:08+00:00</lastmod>
         <priority>0.80</priority>
     </url>
