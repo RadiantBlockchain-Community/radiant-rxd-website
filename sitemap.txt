@@ -7,4 +7,5 @@ https://radiantblockchain.org/links.html
 https://radiantblockchain.org/node-network.html
 https://radiantblockchain.org/participate.html
 https://radiantblockchain.org/initiatives.html
+https://radiantblockchain.org/ambassadors.html
 https://radiantblockchain.org/get-rxd.html
