@@ -18166,9 +18166,9 @@ Table of Contents - Nav + Content
 }
 
 .toc__list .toc__list .toc__link {
-  padding-left: calc(var(--space-xxs) * 2)
+  padding-left: calc(var(--space-xxs) * 2);
+  font-size: 0.85em;
 }
-
 
 .toc__link,
 .toc__label {
@@ -18176,10 +18176,10 @@ Table of Contents - Nav + Content
 }
 
 .toc__link {
-    padding-bottom: 5px;
     position: relative;
     color: var(--toc-link);
-    text-decoration: none
+    text-decoration: none;
+    padding-bottom: 0.5em;
 }
 
 .toc__link::before {
@@ -18204,7 +18204,7 @@ Table of Contents - Nav + Content
 }
 
 .toc__label {
-  margin-bottom: 5px;
+    margin-bottom: 5px;
     text-transform: uppercase;
     letter-spacing: .1em;
     font-weight: 700;
@@ -18345,7 +18345,19 @@ Table of Contents - Nav + Content
 
 .toc--static .toc__link {
     display: inline-flex;
-    font-size: var(--text-sm)
+    font-size: var(--text-sm);
+    padding-bottom: 0px;
+}
+
+.toc--static .toc__list .toc__list .toc__link {
+  padding-left: calc(var(--space-xxs) * 2);
+  margin-top: 0.5em;
+  margin-bottom: 0.1em;
+  font-size: 0.65em;
+}
+
+.toc--static .toc__list .toc__list {
+  padding-bottom: 0.35em;
 }
 
 .toc--static .toc__link--selected::before {
