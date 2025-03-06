@@ -18162,7 +18162,6 @@ Table of Contents - Nav + Content
 
 .toc__list {
     position: relative;
-
 }
 
 .toc__list .toc__list .toc__link {
@@ -18179,7 +18178,7 @@ Table of Contents - Nav + Content
     position: relative;
     color: var(--toc-link);
     text-decoration: none;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.45em;
 }
 
 .toc__link::before {
@@ -18346,7 +18345,7 @@ Table of Contents - Nav + Content
 .toc--static .toc__link {
     display: inline-flex;
     font-size: var(--text-sm);
-    padding-bottom: 0.2em;
+    padding-bottom: 0.1em;
 }
 
 .toc--static .toc__list .toc__list .toc__link {
@@ -18356,7 +18355,7 @@ Table of Contents - Nav + Content
 }
 
 .toc--static .toc__list .toc__list {
-  padding-bottom: 0.25em;
+  padding-bottom: 0.15em;
 }
 
 .toc--static .toc__link--selected::before {
