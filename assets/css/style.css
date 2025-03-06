@@ -18150,7 +18150,6 @@ Table of Contents - Nav + Content
   padding-bottom: 20px;
 }
 
-
 .toc-h2-links {
   padding-top: 30px;
   padding-bottom: 0px;
@@ -18162,11 +18161,13 @@ Table of Contents - Nav + Content
 
 .toc__list {
     position: relative;
+    margin-bottom: 3px;
 }
 
 .toc__list .toc__list .toc__link {
   padding-left: calc(var(--space-xxs) * 2);
   font-size: 0.85em;
+  padding-bottom: 0.15em;
 }
 
 .toc__link,
@@ -18288,7 +18289,7 @@ Table of Contents - Nav + Content
 
 .toc:not(.toc--static) .toc__list {
     padding-left: 15px;
-    padding-bottom: 5px;
+    padding-bottom: 6px;
 }
 
 .toc:not(.toc--static) .toc__label {
@@ -18297,6 +18298,7 @@ Table of Contents - Nav + Content
 
 .toc:not(.toc--static) .toc__link {
     display: flex;
+    padding: 0.25em;
 }
 
 .toc:not(.toc--static).toc--expanded .toc__control-text > *:first-child {
@@ -18355,7 +18357,7 @@ Table of Contents - Nav + Content
 }
 
 .toc--static .toc__list .toc__list {
-  padding-bottom: 0.15em;
+  padding-bottom: 0.01em;
 }
 
 .toc--static .toc__link--selected::before {
