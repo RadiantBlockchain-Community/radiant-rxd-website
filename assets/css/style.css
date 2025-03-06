@@ -18297,7 +18297,7 @@ Table of Contents - Nav + Content
 }
 
 .toc:not(.toc--static) .toc__link {
-    display: flex
+    display: flex;
 }
 
 .toc:not(.toc--static).toc--expanded .toc__control-text > *:first-child {
@@ -18346,18 +18346,17 @@ Table of Contents - Nav + Content
 .toc--static .toc__link {
     display: inline-flex;
     font-size: var(--text-sm);
-    padding-bottom: 0px;
+    padding-bottom: 0.2em;
 }
 
 .toc--static .toc__list .toc__list .toc__link {
   padding-left: calc(var(--space-xxs) * 2);
-  margin-top: 0.5em;
-  margin-bottom: 0.1em;
+  margin-bottom: 0.01em;
   font-size: 0.65em;
 }
 
 .toc--static .toc__list .toc__list {
-  padding-bottom: 0.35em;
+  padding-bottom: 0.25em;
 }
 
 .toc--static .toc__link--selected::before {
