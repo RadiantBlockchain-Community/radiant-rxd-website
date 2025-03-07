@@ -3471,6 +3471,27 @@ h4 {
   }
 }
 
+.landing-subtitle {
+  color: var(--color-contrast-higher);
+  font-size: 4rem;
+  font-weight: 700;
+}
+@media (max-width: 80rem) {
+  .landing-subtitle {
+    font-size: 3em;
+  }
+}
+@media (max-width: 64rem) {
+  .landing-subtitle {
+    font-size: 2.5em;
+  }
+}
+@media (max-width: 32rem) {
+  .landing-subtitle {
+    font-size: 2.5em;
+  }
+}
+
 .page-title {
   color: var(--color-contrast-higher);
   font-size: 5rem;
