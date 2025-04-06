@@ -2,4 +2,4 @@
 
 ## Description
 
-This is the source code of the Radiant RXD Website. Published at radiantblockchain.xyz
+This is the source code of the Radiant RXD Website. Published at radiantblockchain.org
