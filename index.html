@@ -679,11 +679,11 @@
               <h2>Electron Radiant</h2>
             </div>
             <div class="text-center margin-bottom-sm">
-              <p class="subtitle-3">Desktop wallet v0.1.4 for RXD</p>
+              <p class="subtitle-3">Desktop wallet for RXD</p>
             </div>
           </div>
 
-          <div class="margin-top-auto"><a href="https://github.com/Radiant-Core/Electron-Wallet/releases/tag/v0.1.4"
+          <div class="margin-top-auto"><a href="https://github.com/Radiant-Core/Electron-Wallet/releases"
               target="_blank" class="btn btn--subtle btn--md width-100%">Download via GitHub</a></div>
         </div>
 
@@ -751,7 +751,7 @@
             </div>
           </div>
 
-          <div class="margin-top-auto flex flex-wrap gap-xs"><a href="https://photonic.radiant4people.com" target="_blank" class="btn btn--subtle btn--md col-2 col-2@md col-6@lg col-6@sm">Web App</a><a href="https://chromewebstore.google.com/detail/photonic-wallet/ldagidbelgfoonfhbggfgmlhaccfeepb?pli=1" target="_blank" class="btn btn--subtle btn--md col-2 col-2@md col-6@lg col-6@sm">Extension</a></div>
+          <div class="margin-top-auto flex flex-wrap gap-xs"><a href="https://photonic-wallet.com" target="_blank" class="btn btn--subtle btn--md col-2 col-2@md col-6@lg col-6@sm">Web App</a><a href="https://chromewebstore.google.com/detail/photonic-wallet/ldagidbelgfoonfhbggfgmlhaccfeepb?pli=1" target="_blank" class="btn btn--subtle btn--md col-2 col-2@md col-6@lg col-6@sm">Extension</a></div>
         </div>
 
         <div class="p-table__item col-4@xl col-4@lg col-2@md col-6@xs">
@@ -774,7 +774,7 @@
             </div>
           </div>
 
-          <div class="margin-top-auto"><a href="https://glyph.radiant4people.com" target="_blank"
+          <div class="margin-top-auto"><a href="https://glyph-miner.com" target="_blank"
               class="btn btn--subtle btn--md width-100%">Visit Glyph Miner</a></div>
         </div>
 
@@ -2008,11 +2008,11 @@
               <p>You can access your RXD through:</p>
               <p class="faq-subtitle"><strong>Software</strong></p>
               <ul class="list list--ul">
-                <li><a href="https://github.com/Radiant-Core/Electron-Wallet/releases/tag/v0.1.4" target="_blank">Electron Radiant Wallet v0.1.4 - Desktop</a> Open source desktop wallet based off the popular BTC wallet upgraded for RXD.</li>
+                <li><a href="https://github.com/Radiant-Core/Electron-Wallet/releases" target="_blank">Electron Radiant Wallet v0.1.4 - Desktop</a> Open source desktop wallet based off the popular BTC wallet upgraded for RXD.</li>
                 <li><a href="https://apps.apple.com/us/app/chainbow-wallet/id1568850934" target="_blank">ChainBow Wallet v2 - iOS</a> Radiant Wallet compatible with 0-conf transactions.</li>
                 <li><a href="https://play.google.com/store/apps/details?id=io.chainbow.bsvwallet" target="_blank">ChainBow Wallet v2 - Android</a> Radiant Wallet compatible with 0-conf transactions.</li>
                 
-                <li><a href="https://photonic.radiant4people.com" target="_blank">Photonic Wallet - Web App:</a> A multi platform wallet developed by Radiant community developers, compatible with digital asset minting (Glyph Protocol assets).</li>
+                <li><a href="https://photonic-wallet.com" target="_blank">Photonic Wallet - Web App:</a> A multi platform wallet developed by Radiant community developers, compatible with digital asset minting (Glyph Protocol assets).</li>
                 <li><a href="https://chromewebstore.google.com/detail/photonic-wallet/ldagidbelgfoonfhbggfgmlhaccfeepb?pli=1" target="_blank">Photonic Wallet - Extension:</a> Install via the Chrome Web Store.</li>
                 <li><a href="https://chromewebstore.google.com/detail/warwallet/ppohfcljpmdapjfidicjpnpjcgdmgmil" target="_blank">WarWallet - Extension:</a> Install via the Chrome Web Store.</li>
                 <li><a href="https://wallet.glyphium.com" target="_blank">Glyphium Wallet - Web App:</a> A digital asset management wallet for Radiant</li>
@@ -3418,20 +3418,90 @@
   <!-- end Modal -->
 
 
-  <!-- start Estimated halving -->
+  <!-- start Radiant Halving Countdown v1
+    <div class="container max-width-md margin-bottom-xs margin-top-lg padding-y-md">
+      <div class="p-table__item">
+        <div class="text-component text-center max-width-md">
+          <h1 class="padding-top-xxxs">Radiant Halving Countdown</h1>
+          <p class="--color-contrast-high padding-y-xs">3rd RXD halving from 12.5k to 6.25k per block is in April 2028</p>
+          <div class="text-center countdown countdown--grid text-2xl js-countdown max-width-md"
+            data-countdown="2028-04-14T00:00:00.00" data-labels="Days, Hours, Minutes, Seconds">
+          </div>
+        </div>
+      </div>
+    </div>
+  -->
+
+  <!-- start Radiant Halving Countdown -->
   <div class="container max-width-md margin-bottom-xs margin-top-lg padding-y-md">
     <div class="p-table__item">
       <div class="text-component text-center max-width-md">
         <h1 class="padding-top-xxxs">Radiant Halving Countdown</h1>
-        <p class="--color-contrast-high padding-y-xs">2nd RXD halving from 25k to 12.5k per block is estimated for early-mid April 2026</p>
-        <div class="text-center countdown countdown--grid text-2xl js-countdown max-width-md"
-          data-countdown="2026-04-14T00:00:00.00" data-labels="Days, Hours, Minutes, Seconds">
+        <p class="--color-contrast-high padding-top-xs padding-bottom-sm">3rd halving from 12,500 to 6,250 RXD per block is in April 2028</p>
+  
+        <div id="countdown" class="countdown-grid">
+          <div class="countdown-card">
+            <div id="days" class="countdown-value">00</div>
+            <div class="countdown-label">DAYS</div>
+          </div>
+          <div class="countdown-card">
+            <div id="hours" class="countdown-value">00</div>
+            <div class="countdown-label">HOURS</div>
+          </div>
+          <div class="countdown-card">
+            <div id="minutes" class="countdown-value">00</div>
+            <div class="countdown-label">MINS</div>
+          </div>
+          <div class="countdown-card">
+            <div id="seconds" class="countdown-value">00</div>
+            <div class="countdown-label">SECS</div>
+          </div>
         </div>
+  
+        <div class="progress-container margin-left-sm margin-right-sm">
+          <div class="progress-header padding-bottom-xxxs">
+            <span>Halving progress</span>
+            <span id="progress-text" class="progress-percent">0.0%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div id="progress-bar" class="progress-bar-fill"></div>
+          </div>
+          <div class="progress-labels padding-top-xxxs">
+            <span>Block 420,000</span>
+            <span>Block 630,000</span>
+          </div>
+        </div>
+  
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-label">CURRENT BLOCK</div>
+            <div id="current-block" class="stat-detail-value padding-y-xxxs">0</div>
+            <div class="stat-note">live from node</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">BLOCKS REMAINING</div>
+            <div id="blocks-remaining" class="stat-detail-value-main padding-y-xxxs">0</div>
+            <div class="stat-note">until block <span id="next-halving-block">630,000</span></div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">ESTIMATED DATE</div>
+            <div id="estimated-date" class="stat-detail-value padding-y-xxxs">April 2026</div>
+            <div class="stat-note">at ~5 min/block</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">NETWORK HASHRATE</div>
+            <div id="hashrate" class="stat-detail-value padding-y-xxxs">— TH/s</div>
+            <div class="stat-note">SHA-512/256d</div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap flex-center padding-bottom-sm margin-top-md">
+          <a class="btn btn--primary" href="https://halving.rxd-radiant.com" target="_blank">Visit RXD Halving Site</a>
+        </div>
+  
       </div>
     </div>
   </div>
-  <!-- end Estimated halving -->
-
 
   <!-- start RXD emission chart -->
   <section class="container max-width-md text-center padding-y-md margin-bottom-md">
@@ -3440,7 +3510,7 @@
         <h1 class="padding-top-xxxs">Radiant RXD Emission Schedule</h1>
         <p class="--color-contrast-high padding-top-xxxs padding-bottom-md">Radiant began in 2022 with 50,000 RXD emitted per block, halving every 2 years, with a maximum supply of 21 billion RXD.</p>
       </div>
-      <canvas id="radiantEmissionChart"></canvas>
+        <canvas id="radiantEmissionChart" class="padding-bottom-sm"></canvas>
     </div>
   </section>
   <!-- end RXD emission chart -->
@@ -3484,11 +3554,11 @@
                     <h4 class="footer-h4">Ecosystem</h4>
                     <div><a href="https://tangem.com/en/pricing/?promocode=RADIANT" target="_blank">Tangem Wallet</a></div>
                     <div><a href="https://chainbow.io" target="_blank">ChainBow Wallet</a></div>
-                    <div><a href="https://github.com/Radiant-Core/Electron-Wallet/releases/tag/v0.1.4" target="_blank">Electron Radiant Wallet</a></div>
-                    <div><a href="https://photonic.radiant4people.com" target="_blank">Photonic Wallet - Web App</a></div>
+                    <div><a href="https://github.com/Radiant-Core/Electron-Wallet/releases" target="_blank">Electron Radiant Wallet</a></div>
+                    <div><a href="https://photonic-wallet.com" target="_blank">Photonic Wallet - Web App</a></div>
                     <div><a href="https://chromewebstore.google.com/detail/photonic-wallet/ldagidbelgfoonfhbggfgmlhaccfeepb?pli=1" target="_blank">Photonic Wallet - Extension</a></div>
                     <div><a href="https://github.com/Radiant-Core/Photonic-Wallet" target="_blank">Photonic Wallet - Source</a></div>
-                    <div><a href="https://glyph.radiant4people.com" target="_blank">Glyph Miner - Web App</a></div>
+                    <div><a href="https://glyph-miner.com" target="_blank">Glyph Miner - Web App</a></div>
                     <div><a href="https://github.com/Radiant-Core/Glyph-miner" target="_blank">Glyph Miner - Source</a></div>
                     <div><a href="https://chromewebstore.google.com/detail/warwallet/ppohfcljpmdapjfidicjpnpjcgdmgmil" target="_blank">WarWallet - Extension</a></div>
                     <div><a href="https://wallet.glyphium.com" target="_blank">Glyphium Wallet - Web App</a></div>
@@ -3709,7 +3779,7 @@
 
     <section class="text-center padding-bottom-lg">
       <div class="container max-width-md">
-        <p class="footer-text-last-update">Last updated 12 March 2026</p>
+        <p class="footer-text-last-update">Last updated 12 April 2026</p>
       </div>
     </section>
     <!-- end Footer -->
@@ -3724,7 +3794,8 @@
     <script src="assets/js/scripts.js"></script>
     <script src="assets/js/sine-waves.min.js"></script>
     <script src="assets/js/sine.js"></script>
-    <script src="assets/js/countdown.min.js"></script>
+    <!--<script src="assets/js/countdown.min.js"></script> -->
+    <script src="assets/js/rxd-halving.js"></script>
     <script src="assets/js/chart.js"></script>
     <script src="assets/js/rxd-emission-chart.js"></script>
 
