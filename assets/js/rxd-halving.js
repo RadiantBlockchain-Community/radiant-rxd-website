@@ -1,28 +1,39 @@
 const HALVING_INTERVAL = 210000;
 const BLOCK_TIME_SECONDS = 300;
 
-const BLOCK_API = "https://explorer1.rxd-radiant.com/api/getblockcount";
-const HASHRATE_API = "https://explorer1.rxd-radiant.com/api/getnetworkhashps";
+const PRIMARY_BASE = "https://radiantexplorer.com/api";
+const FALLBACK_BASE = "https://explorer1.rxd-radiant.com/api";
 const CORS_PROXY = "https://api.codetabs.com/v1/proxy?quest=";
 
 let currentBlock = 0;
 let nextHalvingBlock = 0;
 let lastUpdateTime = Date.now();
 
-async function fetchWithProxy(url) {
-  const response = await fetch(CORS_PROXY + encodeURIComponent(url), { 
-    cache: 'no-store' 
-  });
+async function fetchWithProxy(baseUrl, endpoint) {
+  const url = `${baseUrl}${endpoint}`;
+  const response = await fetch(CORS_PROXY + encodeURIComponent(url), { cache: 'no-store' });
   if (!response.ok) throw new Error(`Proxy failed: ${response.status}`);
   return await response.text();
 }
 
 async function fetchBlockchainData() {
   try {
-    const [blockText, hashrateText] = await Promise.all([
-      fetchWithProxy(BLOCK_API),
-      fetchWithProxy(HASHRATE_API)
-    ]);
+    let blockText, hashrateText;
+
+    try {
+      [blockText, hashrateText] = await Promise.all([
+        fetchWithProxy(PRIMARY_BASE, "/getblockcount"),
+        fetchWithProxy(PRIMARY_BASE, "/getnetworkhashps")
+      ]);
+      console.log("✅ Using primary explorer: radiantexplorer.com");
+    } catch (err) {
+      console.warn("Primary explorer down, trying fallback...");
+
+      [blockText, hashrateText] = await Promise.all([
+        fetchWithProxy(FALLBACK_BASE, "/getblockcount"),
+        fetchWithProxy(FALLBACK_BASE, "/getnetworkhashps")
+      ]);
+    }
 
     currentBlock = parseInt(blockText.trim(), 10) || 0;
     nextHalvingBlock = Math.ceil(currentBlock / HALVING_INTERVAL) * HALVING_INTERVAL;
@@ -51,7 +62,7 @@ async function fetchBlockchainData() {
     lastUpdateTime = Date.now();
 
   } catch (err) {
-    console.error("Data fetch failed:", err);
+    console.error("Both explorers failed:", err);
   }
 }
 
