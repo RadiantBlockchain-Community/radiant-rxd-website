@@ -18581,7 +18581,7 @@ Table of Contents - Nav + Content
 
 .toc--static[class*=position-sticky] {
     top: 110px;
-    max-height: calc(100vh - var(--space-md) * 2);
+    max-height: calc(90vh - var(--space-md) * 2);
     overflow: auto;
     -webkit-overflow-scrolling: touch
 }
