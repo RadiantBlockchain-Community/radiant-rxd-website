@@ -15168,11 +15168,11 @@ html:not(.js) .no-js\:is-hidden {
   --color-primary-lighter-s: 100%;
   --color-primary-lighter-l: 56%;
 
-  --color-accent-darker: hsl(342, 92%, 41%);
-  --color-accent-dark: hsl(342, 92%, 47%);
-  --color-accent: hsl(342, 92%, 54%);
-  --color-accent-light: hsl(342, 92%, 60%);
-  --color-accent-lighter: hsl(342, 92%, 65%);
+  --color-accent-darker: hsl(195, 100%, 44%);
+  --color-accent-dark: hsl(195, 100%, 44%);
+  --color-accent: hsl(195, 100%, 44%);
+  --color-accent-light: hsl(195, 100%, 44%);
+  --color-accent-lighter: hsl(195, 100%, 44%);
 
   --color-black: hsl(0, 0%, 0%);
   --color-black-h: 0;
@@ -15195,6 +15195,7 @@ html:not(.js) .no-js\:is-hidden {
   --card-color: #111119;
   /* --card-color: hsla(240, 9%, 16%, 0.5); */
   --button-link-color: #ededed;
+  --button-accent-color: #000000;
   --button-subtle: hsla(0, 0%, 0%, 0.3);
   --button-subtle-hover: hsla(0, 0%, 0%, 0.5);
   --button-subtle-inset: #000000;
@@ -15328,6 +15329,7 @@ html:not(.js) .no-js\:is-hidden {
   --font-color: var(--color-contrast-high);
   --card-color: #f3f6fb;
   --button-link-color: #000000;
+  --button-accent-color: #000000;
   --button-subtle: hsl(0, 0%, 100%);
   --button-subtle-hover: #ffffff;
   --button-subtle-inset: #eceefa;
@@ -15356,11 +15358,11 @@ html:not(.js) .no-js\:is-hidden {
   --electric: #007CB4;
   --radiant-blue: #1F4495;
 
-  --color-accent-darker: hsl(342, 89%, 38%);
-  --color-accent-dark: hsl(342, 89%, 43%);
-  --color-accent: hsl(342, 89%, 48%);
-  --color-accent-light: hsl(342, 89%, 56%);
-  --color-accent-lighter: hsl(342, 89%, 62%);
+  --color-accent-darker: hsl(195, 100%, 44%);
+  --color-accent-dark: hsl(195, 100%, 44%);
+  --color-accent: hsl(195, 100%, 44%);
+  --color-accent-light: hsl(195, 100%, 44%);
+  --color-accent-lighter: hsl(195, 100%, 44%);
 
   --color-black: hsl(0, 0%, 0%);
   --color-black-h: 0;
@@ -15782,12 +15784,13 @@ mark {
 }
 
 .btn--accent {
-  background: var(--color-accent);
-  color: var(--color-white);
+  background: none;
+  border: solid 1px var(--color-accent);
+  color: var(--link);
 }
 .btn--accent:hover {
-  color: #ffffff;
-  background: var(--color-accent-light);
+  border: solid 1px var(--color-accent);
+  color: var(--link);
 }
 .btn--accent:focus {
   box-shadow: none;
@@ -15803,6 +15806,34 @@ mark {
 }
 .btn--secondary:focus {
   box-shadow: none;
+}
+
+.btn--tertiary {
+  font-size: 0.65em;
+  background: var(--color-contrast-transparent);
+  color: var(--color-contrast-high);
+  border: solid 1px var(--color-contrast-lower);
+}
+.btn--tertiary:hover {
+  background: var(--color-contrast-transparent);
+  color: var(--logo-color-invert);
+  border: solid 1px var(--color-contrast-lower);
+}
+.btn--tertiary:focus {
+  box-shadow: inset 0px 0px 0px
+      hsla(
+        var(--color-white-h),
+        var(--color-white-s),
+        var(--color-white-l),
+        0.15
+      ),
+    0px 0px 0px 0px
+      hsla(
+        var(--color-primary-h),
+        var(--color-primary-s),
+        var(--color-primary-l),
+        0.2
+      );
 }
 
 .btn--dark {
@@ -16822,6 +16853,32 @@ Radiant Halving Countdown
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 1px;
+}
+
+/* -------------------------------- 
+RXD Remaining to be mined
+-------------------------------- */
+.remaining-rxd-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums
+}
+@media (max-width: 64rem) {
+  .remaining-rxd-value {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 32rem) {
+  .remaining-rxd-value {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 24rem) {
+  .remaining-rxd-value {
+    font-size: 1.5rem;
+  }
 }
 
 .stats-grid {
@@ -18848,33 +18905,31 @@ Quick Links - Cards
 
 @media (max-width: 90rem) {
   .p-link__item {
-    --grid-columns: 1;
+    --grid-columns: 2;
   }
 }
 @media (max-width: 80rem) {
   .p-link__item {
-    --grid-columns: 1;
+    --grid-columns: 2;
   }
 }
 @media (max-width: 64rem) {
   .p-link__item {
-    --grid-columns: 1;
+    --grid-columns: 2;
   }
 }
 @media (max-width: 32rem) {
   .p-link__item {
-    --grid-columns: 1;
+    --grid-columns: 2;
   }
 }
 @media (max-width: 24rem) {
   .p-link__item {
-    --grid-columns: 1;
+    --grid-columns: 2;
   }
 }
 @media (max-width: 18rem) {
   .p-link__item {
-    --grid-columns: 1;
+    --grid-columns: 2;
   }
 }
-
-
