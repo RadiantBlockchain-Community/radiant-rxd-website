@@ -3981,6 +3981,18 @@ u {
   display: none !important;
 }
 
+.eco-hidden-card {
+  transition: opacity 0.2s ease;
+}
+
+.eco-hidden-card.is-hidden {
+  opacity: 0;
+}
+
+#ecosystem-toggle {
+  scroll-margin-bottom: 30px;
+}
+
 html:not(.js) .no-js\:is-hidden {
   display: none !important;
 }

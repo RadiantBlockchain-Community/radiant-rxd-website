@@ -1166,3 +1166,46 @@ function () {
 
 
 }());
+
+(function() {
+  var toggleButton = document.getElementById('ecosystem-toggle');
+  var hiddenCards = document.querySelectorAll('.eco-hidden-card');
+  if (!toggleButton || !hiddenCards.length) return;
+
+  function updateButton(isExpanded) {
+    toggleButton.textContent = isExpanded ? 'Show less' : 'Show more';
+    toggleButton.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+  }
+
+  function showCards() {
+    Array.prototype.forEach.call(hiddenCards, function(card) {
+      card.classList.remove('is-hidden');
+      card.setAttribute('aria-hidden', 'false');
+    });
+  }
+
+  function hideCards() {
+    Array.prototype.forEach.call(hiddenCards, function(card) {
+      card.classList.add('is-hidden');
+      card.setAttribute('aria-hidden', 'true');
+    });
+  }
+
+  toggleButton.addEventListener('click', function() {
+    var shouldShow = hiddenCards[0].classList.contains('is-hidden');
+    if (shouldShow) {
+      showCards();
+      updateButton(true);
+    } else {
+      hideCards();
+      updateButton(false);
+    }
+
+    setTimeout(function() {
+      var rect = toggleButton.getBoundingClientRect();
+      if (rect.top < 0 || rect.bottom > window.innerHeight) {
+        toggleButton.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      }
+    }, 50);
+  });
+})();
