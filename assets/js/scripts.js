@@ -660,7 +660,7 @@ function resetFocusTabsStyle() {
 }());
 
 
-// RXD live market stats
+// start RXD live market stats
 async function fetchData() {
   try {
       const response = await fetch('https://api.coingecko.com/api/v3/coins/radiant?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false');
@@ -669,19 +669,40 @@ async function fetchData() {
       const currentPrice = data.market_data.current_price.usd;
       const marketCap = data.market_data.market_cap.usd;
       const totalVolume = data.market_data.total_volume.usd;
+      
+      const circulatingSupply = data.market_data.circulating_supply;
+
+      const MAX_SUPPLY = 21000000000;
+      const remainingSupply = MAX_SUPPLY - Math.floor(circulatingSupply);
 
       document.getElementById('current-price').innerText = `$${currentPrice}`;
       document.getElementById('market-cap').innerText = `$${marketCap.toLocaleString()}`;
       document.getElementById('total-volume').innerText = `$${totalVolume.toLocaleString()}`;
+
+      const circEl = document.getElementById('circ-supply');
+      if (circEl) {
+        const formattedCirc = Math.floor(circulatingSupply).toLocaleString('en-US');
+        circEl.textContent = formattedCirc;
+      }
+
+      const remainingEl = document.getElementById('remaining-supply');
+      if (remainingEl) {
+        const formattedRemaining = remainingSupply.toLocaleString('en-US');
+        remainingEl.textContent = formattedRemaining;
+      }
+
   } catch (error) {
       console.error('Error fetching data:', error);
+      
+      const circEl = document.getElementById('circ-supply');
+      const remainingEl = document.getElementById('remaining-supply');
+      if (circEl) circEl.textContent = '—';
+      if (remainingEl) remainingEl.textContent = '—';
   }
 }
 
-// Fetch data on page load
 fetchData();
 
-// Refresh data every 5 minutes
 setInterval(fetchData, 300000);
 
 // end RXD live market stats
@@ -1145,3 +1166,46 @@ function () {
 
 
 }());
+
+(function() {
+  var toggleButton = document.getElementById('ecosystem-toggle');
+  var hiddenCards = document.querySelectorAll('.eco-hidden-card');
+  if (!toggleButton || !hiddenCards.length) return;
+
+  function updateButton(isExpanded) {
+    toggleButton.textContent = isExpanded ? 'Show less' : 'Show more';
+    toggleButton.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+  }
+
+  function showCards() {
+    Array.prototype.forEach.call(hiddenCards, function(card) {
+      card.classList.remove('is-hidden');
+      card.setAttribute('aria-hidden', 'false');
+    });
+  }
+
+  function hideCards() {
+    Array.prototype.forEach.call(hiddenCards, function(card) {
+      card.classList.add('is-hidden');
+      card.setAttribute('aria-hidden', 'true');
+    });
+  }
+
+  toggleButton.addEventListener('click', function() {
+    var shouldShow = hiddenCards[0].classList.contains('is-hidden');
+    if (shouldShow) {
+      showCards();
+      updateButton(true);
+    } else {
+      hideCards();
+      updateButton(false);
+    }
+
+    setTimeout(function() {
+      var rect = toggleButton.getBoundingClientRect();
+      if (rect.top < 0 || rect.bottom > window.innerHeight) {
+        toggleButton.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      }
+    }, 50);
+  });
+})();
