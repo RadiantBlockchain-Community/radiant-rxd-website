@@ -16806,7 +16806,7 @@ Radiant Halving Countdown
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   gap: 16px;
-  margin-bottom: 50px;
+  margin-bottom: 2.5em;
 }
 @media (max-width: 32rem) {
   .countdown-grid {
@@ -16862,9 +16862,33 @@ Radiant Halving Countdown
 
 .countdown-label {
   color: var(--color-contrast-medium);
-  font-size: 13px;
+  font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 1px;
+}
+@media (max-width: 64rem) {
+  .countdown-label {
+    color: var(--color-contrast-medium);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+}
+@media (max-width: 32rem) {
+  .countdown-label {
+    color: var(--color-contrast-medium);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+}
+@media (max-width: 24rem) {
+  .countdown-label {
+    color: var(--color-contrast-medium);
+    font-size: 0.55rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
 }
 
 /* -------------------------------- 
@@ -16954,6 +16978,115 @@ RXD Remaining to be mined
   color: #64748b;
   font-size: 13px;
 }
+
+/* -------------------------------- 
+Radiant Node Stats
+-------------------------------- */
+
+.nodes-notice {
+  color: var(--color-contrast-medium);
+  font-size: 0.8em;
+  font-weight: 400;
+  line-height: 1.5em;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 32rem) {
+  .nodes-notice {
+    font-size: 0.75em;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 24rem) {
+  .nodes-notice {
+    font-size: 0.75em;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 18rem) {
+  .nodes-notice {
+    font-size: 0.75em;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.nodes-subtitle {
+  color: var(--color-contrast-medium);
+  font-size: 1em;
+  font-weight: 400;
+  padding-top: 0.5rem;
+  padding-bottom: 2.5rem;
+}
+@media (max-width: 32rem) {
+  .nodes-subtitle {
+    font-size: 1em;
+      padding-top: 0.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+@media (max-width: 24rem) {
+  .nodes-subtitle {
+    font-size: 1em;
+      padding-top: 0.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+@media (max-width: 18rem) {
+  .nodes-subtitle {
+    font-size: 1em;
+      padding-top: 0.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+.live-nodes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+  gap: 16px;
+  margin-bottom: 2em;
+}
+@media (max-width: 32rem) {
+  .live-nodes-grid {
+    gap: 12px;
+    margin-bottom: 1.25em;
+  }
+}
+@media (max-width: 24rem) {
+  .live-nodes-grid {
+    gap: 12px;
+    margin-bottom: 1.25em;
+  }
+}
+@media (max-width: 18rem) {
+  .live-nodes-grid {
+    gap: 12px;
+    margin-bottom: 1.25em;
+  }
+}
+
+.node-version-amount {
+  font-weight: 600;
+}
+.node-version-percent {
+  color: var(--electric);
+}
+
+.nodes-container {
+  color: var(--color-contrast-high);
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--card-color);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+}
+
 
 .progress-container {
   margin-bottom: 50px;

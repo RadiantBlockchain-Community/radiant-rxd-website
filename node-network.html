@@ -218,8 +218,10 @@
 
   <section class="topo">
   <canvas id="topology"></canvas>
+
   <!-- start Radiant Node Network -->
   <div class="container bg-transparent max-width-md margin-bottom-xs padding-y-md js-reading-content">
+
     <div class="text-component max-width-md">
     <h1 class="article-h1">Radiant Blockchain Node Network</h1>
   
@@ -259,20 +261,147 @@
 
     <p><a href="https://github.com/RadiantBlockchain/radiant-node/blob/master/doc/whitepaper/radiant.md#6-network" target="_blank">Section '6. Network' of the Radiant Whitepaper</a> has further information and details</p>
 
-    <h2 class="article-h2">Run and host a Node</h2>
+    <!-- start Live Node Stats -->
+    <div class="max-width-md margin-top-xl margin-bottom-lg">
+      <div class="nodes-container">
+        <div class="text-component text-center">
+          <h1 class="padding-top-xxxs">Radiant Node Stats</h1>
+        </div>
+      <!-- start Stat Cards -->
+      <div class="live-nodes-grid margin-top-md margin-x-sm" id="live-stats">
 
-    <p>Support the growth of the Radiant Network</p>
-    <p><a href="https://radiantcore.org/docs/developer-guide.html#running-node" target="_blank">Guide on how to set up a Radiant Node</a></p>
-    <p><a href="https://github.com/Radiant-Core/Radiant-Core/releases" target="_blank">Radiant Node release files on GitHub</p>
-    <p><a href="https://discord.gg/radiantblockchain" target="_blank">Join the Radiant Discord</a> and ask how you can help in the #node-help channel</p>
+        <div class="countdown-card text-center">
+          <div class="countdown-value">---</div>
+          <div class="countdown-label padding-bottom-xs">TOTAL NODES</div>
+        </div>
+        <div class="countdown-card text-center">
+          <div class="countdown-value">--</div>
+          <div class="countdown-label padding-bottom-xs">ONLINE NODES</div>
+        </div>
+        <div class="countdown-card text-center">
+          <div class="countdown-value">---</div>
+          <div class="countdown-label padding-bottom-xs">OFFLINE NODES</div>
+        </div>
+      </div>
+      <div class="text-component text-left margin-x-sm">
+      <p class="--color-contrast-high nodes-notice">
+        <strong>Online vs Offline:</strong> <strong class="color-contrast-high">Online</strong> nodes accept incoming P2P connections and can be contacted by the crawler. <strong class="color-contrast-high">Offline</strong> nodes either: (1) are truly offline/disconnected, or (2) are online but behind NAT/firewalls (not accepting inbound connections). Nodes that don't accept incoming connections still actively support the network by validating blocks, relaying transactions, and participating in consensus.
+      </p>
+      </div>
+      <!-- end Stat Cards -->
 
-    <h2 class="article-h2">Radiant Node Crawler</h2>
+      <!-- start Version Distribution -->
+      <div class="nodes-container margin-top-xxs">
+        <div class="text-component text-center max-width-md margin-top-md">
+          <h2 class="color-contrast-higher">Version Distribution</h2>
+          <p class="nodes-subtitle">Discoverable Online Nodes</p>
+        </div>
+        <div id="version-distribution">
+  
+          <div id="version-skeleton">
+            <div class="margin-bottom-md">
+              <div class="flex justify-between items-baseline text-sm margin-bottom-md">
+                <span class="placeholder" style="width: 45%; background: var(--color-contrast-lower);"></span>
+                <span class="placeholder" style="width: 22%; background: var(--color-contrast-lower);"></span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 65%;"></div>
+              </div>
+            </div>
+            <div class="margin-bottom-md">
+              <div class="flex justify-between items-baseline text-sm margin-bottom-md">
+                <span class="placeholder" style="width: 45%; background: var(--color-contrast-lower);"></span>
+                <span class="placeholder" style="width: 22%; background: var(--color-contrast-lower);"></span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 25%;"></div>
+              </div>
+            </div>
+            <div class="margin-bottom-md">
+              <div class="flex justify-between items-baseline text-sm margin-bottom-md">
+                <span class="placeholder" style="width: 45%; background: var(--color-contrast-lower);"></span>
+                <span class="placeholder" style="width: 22%; background: var(--color-contrast-lower);"></span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 15%;"></div>
+              </div>
+            </div>
+            <div class="margin-bottom-md">
+              <div class="flex justify-between items-baseline text-sm margin-bottom-md">
+                <span class="placeholder" style="width: 45%; background: var(--color-contrast-lower);"></span>
+                <span class="placeholder" style="width: 22%; background: var(--color-contrast-lower);"></span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 12%;"></div>
+              </div>
+            </div>
+            <div class="margin-bottom-md">
+              <div class="flex justify-between items-baseline text-sm margin-bottom-md">
+                <span class="placeholder" style="width: 45%; background: var(--color-contrast-lower);"></span>
+                <span class="placeholder" style="width: 22%; background: var(--color-contrast-lower);"></span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 10%;"></div>
+              </div>
+            </div>
+            <div class="margin-bottom-md">
+              <div class="flex justify-between items-baseline text-sm margin-bottom-md">
+                <span class="placeholder" style="width: 45%; background: var(--color-contrast-lower);"></span>
+                <span class="placeholder" style="width: 22%; background: var(--color-contrast-lower);"></span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 10%;"></div>
+              </div>
+            </div>
+            <div class="margin-bottom-md">
+              <div class="flex justify-between items-baseline text-sm margin-bottom-md">
+                <span class="placeholder" style="width: 45%; background: var(--color-contrast-lower);"></span>
+                <span class="placeholder" style="width: 22%; background: var(--color-contrast-lower);"></span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 10%;"></div>
+              </div>
+            </div>
+            <div class="margin-bottom-md">
+              <div class="flex justify-between items-baseline text-sm margin-bottom-md">
+                <span class="placeholder" style="width: 45%; background: var(--color-contrast-lower);"></span>
+                <span class="placeholder" style="width: 22%; background: var(--color-contrast-lower);"></span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 10%;"></div>
+              </div>
+            </div>
 
-    <div><a href="https://nodes.rxd-radiant.com" target="_blank">Real-time Radiant network monitoring and node discovery</a></div>
+          </div>
+        </div>
+      </div>
+      <!-- end Version Distribution -->
+
+      <div class="text-center nodes-notice">
+        Data refreshes every 30 seconds and is pulled from Radiant Node Crawler 
+      </div>
+      <div class="flex flex-wrap flex-center margin-bottom-md margin-top-md">
+        <a class="btn btn--primary" href="https://nodes.rxd-radiant.com" target="_blank">Visit Radiant Node Crawler</a>
+      </div>
+
+    </div>
+  </div>
+  <!-- end Live Node Stats -->
+
+  <h2 class="article-h2">Run and host a Node</h2>
+
+  <p>Support the growth of the Radiant Network</p>
+  <p><a href="https://radiantcore.org/docs/developer-guide.html#running-node" target="_blank">Guide on how to set up a Radiant Node</a></p>
+  <p><a href="https://github.com/Radiant-Core/Radiant-Core/releases" target="_blank">Radiant Node release files on GitHub</p>
+  <p><a href="https://discord.gg/radiantblockchain" target="_blank">Join the Radiant Discord</a> and ask how you can help in the #node-help channel</p>
+
 
   <!-- end Main Radiant Node Network -->
-  <br>  
+
+  <br>
+  <br>
   <hr>
+
 
   <!-- start Full Node vs ElectrumX comparison -->
 
@@ -556,12 +685,13 @@
 
   <section class="text-center padding-bottom-lg">
     <div class="container max-width-md">
-      <p class="footer-text-last-update">Last updated 16 May 2026</p>
+      <p class="footer-text-last-update">Last updated 18 May 2026</p>
     </div>
   </section>
   <!-- end Footer -->
-  
+
 <script src="assets/js/scripts.js"></script>
+<script src="assets/js/rxd-nodes.js"></script>
 <script src="assets/js/reading-progress.js"></script>
 <script src="assets/js/topology.js"></script>
 
