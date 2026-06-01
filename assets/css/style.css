@@ -3471,6 +3471,27 @@ h4 {
   }
 }
 
+.horizon-title {
+  color: var(--color-contrast-higher);
+  font-size: 4rem;
+  font-weight: 700;
+}
+@media (max-width: 80rem) {
+  .horizon-title {
+    font-size: 3em;
+  }
+}
+@media (max-width: 64rem) {
+  .horizon-title {
+    font-size: 2.5em;
+  }
+}
+@media (max-width: 32rem) {
+  .horizon-title {
+    font-size: 2.25em;
+  }
+}
+
 .landing-subtitle {
   color: var(--color-contrast-higher);
   font-size: 4rem;
@@ -17685,7 +17706,6 @@ background-color: #000000;
   color: var(--electric);
 }
 
-
 /* -------------------------------- 
 Article Progress Bar
 -------------------------------- */
@@ -18335,6 +18355,16 @@ Navigation
 }
 @media(min-width:64rem) {
   .sub-nav-gap {
+      padding: 5px 0 12px 0
+  }
+}
+@media(min-width:80rem) {
+  .sub-nav-gap {
+    padding: 18px var(--space-sm) 0px;
+  }
+}
+@media(min-width:90rem) {
+  .sub-nav-gap {
     padding: 18px var(--space-sm) 0px;
   }
 }
@@ -18536,6 +18566,12 @@ Table of Contents - Nav + Content
   padding-top: 20px;
   padding-bottom: 15px;
 }
+
+.toc-h2-horizon {
+  margin-top: 0 !important;
+  padding-bottom: 15px;
+}
+
 .toc-h3 {
   padding-top: 20px;
   padding-bottom: 20px;

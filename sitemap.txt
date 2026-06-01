@@ -1,4 +1,5 @@
 https://radiantblockchain.org
+https://radiantblockchain.org/news.html
 https://radiantblockchain.org/guides.html
 https://radiantblockchain.org/glyphs-guide.html
 https://radiantblockchain.org/glyphs-protocol-guide.html
