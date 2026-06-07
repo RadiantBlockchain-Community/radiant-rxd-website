@@ -4,35 +4,22 @@ const BLOCK_TIME_SECONDS = 300;
 const PRIMARY_BASE = "https://radiantexplorer.com/api";
 const FALLBACK_BASE = "https://explorer1.rxd-radiant.com/api";
 
-const CORS_PROXIES = [
-  "https://api.cors.lol/?url=",       
-  "https://corsproxy.io/?",
-  "https://api.allorigins.win/raw?url=",
-  "https://api.codetabs.com/v1/proxy?quest="
-];
+const WORKER_URL = "https://radiant-halving-proxy.bitopia-rxd.workers.dev";
 
 let currentBlock = 0;
 let nextHalvingBlock = 0;
 let lastUpdateTime = Date.now();
 
-async function fetchWithProxy(baseUrl, endpoint) {
-  const targetUrl = `${baseUrl}${endpoint}`;
-  
-  for (const proxy of CORS_PROXIES) {
-    try {
-      const fullUrl = proxy + encodeURIComponent(targetUrl);
-      const response = await fetch(fullUrl, { cache: 'no-store' });
-      
-      if (response.ok) {
-        return await response.text();
-      }
-    } catch (e) {
+async function fetchWithWorker(baseUrl, endpoint) {
+  const target = `${baseUrl}${endpoint}`;
+  const response = await fetch(`${WORKER_URL}?url=${encodeURIComponent(target)}`, {
+    cache: 'no-store'
+  });
 
-      continue;
-    }
+  if (!response.ok) {
+    throw new Error(`Worker failed: ${response.status}`);
   }
-  
-  throw new Error("All CORS proxies failed");
+  return await response.text();
 }
 
 async function fetchBlockchainData() {
@@ -41,14 +28,14 @@ async function fetchBlockchainData() {
 
     try {
       [blockText, hashrateText] = await Promise.all([
-        fetchWithProxy(PRIMARY_BASE, "/getblockcount"),
-        fetchWithProxy(PRIMARY_BASE, "/getnetworkhashps")
+        fetchWithWorker(PRIMARY_BASE, "/getblockcount"),
+        fetchWithWorker(PRIMARY_BASE, "/getnetworkhashps")
       ]);
     } catch (err) {
       console.warn("Primary explorer failed, trying fallback...");
       [blockText, hashrateText] = await Promise.all([
-        fetchWithProxy(FALLBACK_BASE, "/getblockcount"),
-        fetchWithProxy(FALLBACK_BASE, "/getnetworkhashps")
+        fetchWithWorker(FALLBACK_BASE, "/getblockcount"),
+        fetchWithWorker(FALLBACK_BASE, "/getnetworkhashps")
       ]);
     }
 
@@ -79,7 +66,7 @@ async function fetchBlockchainData() {
     lastUpdateTime = Date.now();
 
   } catch (err) {
-    console.error("All data sources failed:", err);
+    console.error("Data fetch failed:", err);
   }
 }
 
