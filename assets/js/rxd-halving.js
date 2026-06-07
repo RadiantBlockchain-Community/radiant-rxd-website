@@ -3,17 +3,36 @@ const BLOCK_TIME_SECONDS = 300;
 
 const PRIMARY_BASE = "https://radiantexplorer.com/api";
 const FALLBACK_BASE = "https://explorer1.rxd-radiant.com/api";
-const CORS_PROXY = "https://api.codetabs.com/v1/proxy?quest=";
+
+const CORS_PROXIES = [
+  "https://api.cors.lol/?url=",       
+  "https://corsproxy.io/?",
+  "https://api.allorigins.win/raw?url=",
+  "https://api.codetabs.com/v1/proxy?quest="
+];
 
 let currentBlock = 0;
 let nextHalvingBlock = 0;
 let lastUpdateTime = Date.now();
 
 async function fetchWithProxy(baseUrl, endpoint) {
-  const url = `${baseUrl}${endpoint}`;
-  const response = await fetch(CORS_PROXY + encodeURIComponent(url), { cache: 'no-store' });
-  if (!response.ok) throw new Error(`Proxy failed: ${response.status}`);
-  return await response.text();
+  const targetUrl = `${baseUrl}${endpoint}`;
+  
+  for (const proxy of CORS_PROXIES) {
+    try {
+      const fullUrl = proxy + encodeURIComponent(targetUrl);
+      const response = await fetch(fullUrl, { cache: 'no-store' });
+      
+      if (response.ok) {
+        return await response.text();
+      }
+    } catch (e) {
+
+      continue;
+    }
+  }
+  
+  throw new Error("All CORS proxies failed");
 }
 
 async function fetchBlockchainData() {
@@ -25,10 +44,8 @@ async function fetchBlockchainData() {
         fetchWithProxy(PRIMARY_BASE, "/getblockcount"),
         fetchWithProxy(PRIMARY_BASE, "/getnetworkhashps")
       ]);
-      console.log("✅ Using primary explorer: radiantexplorer.com");
     } catch (err) {
-      console.warn("Primary explorer down, trying fallback...");
-
+      console.warn("Primary explorer failed, trying fallback...");
       [blockText, hashrateText] = await Promise.all([
         fetchWithProxy(FALLBACK_BASE, "/getblockcount"),
         fetchWithProxy(FALLBACK_BASE, "/getnetworkhashps")
@@ -62,7 +79,7 @@ async function fetchBlockchainData() {
     lastUpdateTime = Date.now();
 
   } catch (err) {
-    console.error("Both explorers failed:", err);
+    console.error("All data sources failed:", err);
   }
 }
 
