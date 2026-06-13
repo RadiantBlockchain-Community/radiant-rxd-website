@@ -3,16 +3,22 @@ const BLOCK_TIME_SECONDS = 300;
 
 const PRIMARY_BASE = "https://radiantexplorer.com/api";
 const FALLBACK_BASE = "https://explorer1.rxd-radiant.com/api";
-const CORS_PROXY = "https://api.codetabs.com/v1/proxy?quest=";
+
+const WORKER_URL = "https://radiant-halving-proxy.bitopia-rxd.workers.dev";
 
 let currentBlock = 0;
 let nextHalvingBlock = 0;
 let lastUpdateTime = Date.now();
 
-async function fetchWithProxy(baseUrl, endpoint) {
-  const url = `${baseUrl}${endpoint}`;
-  const response = await fetch(CORS_PROXY + encodeURIComponent(url), { cache: 'no-store' });
-  if (!response.ok) throw new Error(`Proxy failed: ${response.status}`);
+async function fetchWithWorker(baseUrl, endpoint) {
+  const target = `${baseUrl}${endpoint}`;
+  const response = await fetch(`${WORKER_URL}?url=${encodeURIComponent(target)}`, {
+    cache: 'no-store'
+  });
+
+  if (!response.ok) {
+    throw new Error(`Worker failed: ${response.status}`);
+  }
   return await response.text();
 }
 
@@ -22,16 +28,14 @@ async function fetchBlockchainData() {
 
     try {
       [blockText, hashrateText] = await Promise.all([
-        fetchWithProxy(PRIMARY_BASE, "/getblockcount"),
-        fetchWithProxy(PRIMARY_BASE, "/getnetworkhashps")
+        fetchWithWorker(PRIMARY_BASE, "/getblockcount"),
+        fetchWithWorker(PRIMARY_BASE, "/getnetworkhashps")
       ]);
-      console.log("✅ Using primary explorer: radiantexplorer.com");
     } catch (err) {
-      console.warn("Primary explorer down, trying fallback...");
-
+      console.warn("Primary explorer failed, trying fallback...");
       [blockText, hashrateText] = await Promise.all([
-        fetchWithProxy(FALLBACK_BASE, "/getblockcount"),
-        fetchWithProxy(FALLBACK_BASE, "/getnetworkhashps")
+        fetchWithWorker(FALLBACK_BASE, "/getblockcount"),
+        fetchWithWorker(FALLBACK_BASE, "/getnetworkhashps")
       ]);
     }
 
@@ -62,7 +66,7 @@ async function fetchBlockchainData() {
     lastUpdateTime = Date.now();
 
   } catch (err) {
-    console.error("Both explorers failed:", err);
+    console.error("Data fetch failed:", err);
   }
 }
 
