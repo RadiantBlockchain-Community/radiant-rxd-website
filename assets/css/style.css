@@ -3467,7 +3467,7 @@ h4 {
 }
 @media (max-width: 32rem) {
   .landing-title {
-    font-size: 3em;
+    font-size: 2.5em;
   }
 }
 
@@ -18557,6 +18557,16 @@ Topology background
 /* -------------------------------- 
 Table of Contents - Nav + Content
 ------------------------------- */
+
+.no-break {
+  white-space: nowrap;
+  display: inline-block;
+}
+.related-links {
+  line-height: 2em !important;
+  
+}
+
 :root {
     --toc-border-width: 1px
     /* static version only */
