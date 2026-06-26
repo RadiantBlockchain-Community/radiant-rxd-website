@@ -660,7 +660,6 @@ OP_DUP OP_HASH160 3a23c6b9055b533db3900e4755dd58d1234c8582 OP_EQUALVERIFY OP_CHE
               <p class="margin-top-sm">Resulting hash must be below the target.</p>
               <p><code>anyInputHash</code> and <code>anyOutputHash</code> must be the hash of any input or output in the transaction. This allows work to be bound to the miner's address and prevents nonces being stolen. This will typically be a pay-to-public-key-hash but any script can be used. The contract will verify these scripts exist.</p>
 
-              <!-- NEW: Wallet Safety section from official GitHub source -->
               <h2 class="toc-h2" id="wallet-safety" class="toc-content__target">Wallet Safety</h2>
               <p><strong>Coin selection must never spend a token-bearing UTXO as ordinary funding.</strong> An output whose script carries an <code>OP_PUSHINPUTREF</code>-family opcode (<code>0xd0–0xd3</code>, <code>0xd8</code>) in opcode position holds an FT, NFT or dmint contract. Spending it as plain RXD and sending the change to a P2PKH output silently and permanently burns the token.</p>
               <p>Detect token-bearing scripts by walking the opcode stream and skipping push payloads. A plain byte search for <code>0xd0–0xd8</code> produces false positives on roughly half of all honest P2PKH addresses and is itself a denial-of-service surface.</p>
@@ -674,7 +673,7 @@ OP_DUP OP_HASH160 3a23c6b9055b533db3900e4755dd58d1234c8582 OP_EQUALVERIFY OP_CHE
               <h3 class="toc-h3" id="querying" class="toc-content__target">Querying</h3>
               <p>ElectrumX indexes each script with the ref zeroed out. The zeroed ref acts as a wildcard meaning a wallet can fetch all transactions for an address by using a ref with 36 zero bytes in the token script.</p>
               <p>For example:</p>
-              <pre class="code-snippet"><code>OP_PUSHINPUTREFSINGLETON 000000000000000000000000im 000000000000000000000000000000000000000000000000000000000000000000000000 OP_DROP OP_DUP OP_HASH160 &lt;address&gt; OP_EQUALVERIFY OP_CHECKSIG</code></pre>
+              <pre class="code-snippet"><code>OP_PUSHINPUTREFSINGLETON 000000000000000000000000000000000000000000000000000000000000000000000000 OP_DROP OP_DUP OP_HASH160 &lt;address&gt; OP_EQUALVERIFY OP_CHECKSIG</code></pre>
               <p class="margin-top-sm">This script is hashed and can be used with <code>listunspent</code> and script hash subscriptions. This prevents having to perform many queries for each token ref or having to know token refs in advance.</p>
 
               <h3 class="toc-h3" id="ref-get" class="toc-content__target">Ref get</h3>
@@ -684,6 +683,18 @@ OP_DUP OP_HASH160 3a23c6b9055b533db3900e4755dd58d1234c8582 OP_EQUALVERIFY OP_CHE
               <h3 class="toc-h3" id="list-unspent" class="toc-content__target">List unspent</h3>
               <p>The <code>listunspent</code> method is improved to return an array of all refs contained in the script. Since refs are zeroed when querying for tokens, the wallet does not know the token ref in the returned UTXOs and would need to query each UTXO individually to determine the token.</p>
               <p>With refs returned as part of the <code>listunspent</code> response, the wallet can build scripts without the additional queries.</p>
+
+              <!-- NEW SECTIONS ADDED AS REQUESTED -->
+              <h2 class="toc-h2" id="further-information" class="toc-content__target">Further information</h2>
+              <p>For more information including code for the mining smart contract see the Glyph Miner GitHub:</p>
+              <ul class="margin-top-sm">
+                <li><a href="https://github.com/Radiant-Core/Glyph-miner" target="_blank" rel="noopener">https://github.com/Radiant-Core/Glyph-miner</a></li>
+                <li><a href="https://github.com/Radiant-Core/Glyph-Contracts" target="_blank" rel="noopener">https://github.com/Radiant-Core/Glyph-Contracts</a></li>
+              </ul>
+
+              <h2 class="toc-h2" id="photonic-wallet" class="toc-content__target">Photonic Wallet</h2>
+              <p>Non-custodial wallet for minting tokens on the Radiant blockchain.</p>
+              <p><a href="https://github.com/Radiant-Core/Photonic-Wallet" target="_blank" rel="noopener">https://github.com/Radiant-Core/Photonic-Wallet</a></p>
 
               <br>
               <hr>
