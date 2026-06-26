@@ -220,132 +220,127 @@
 
 
   <!-- start Guide content -->
-  <div class="container max-width-adaptive-lg margin-bottom-xs padding-y-md js-reading-content">
-    <div class="grid gap-md flex-row@md">
-        <div class="col-3@md">
-            <div class="toc toc--static@lg position-sticky@md js-toc"><button class="toc__control padding-sm no-js:hide js-toc__control" aria-controls="toc"><span class="toc__control-text"><i class="js-toc__control-label">Contents <span class="sr-only">- press button to select new section.</span></i> <i aria-hidden="true">Select</i> </span><svg class="toc__icon-arrow icon icon--xs margin-left-3xs no-js:hide" viewBox="0 0 16 16" aria-hidden="true">
-                        <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                            <path d="M3 3l10 10"></path>
-                            <path d="M13 3L3 13"></path>
-                        </g>
-                    </svg></button>
-                <nav class="toc__nav">
-                    <ul class="toc__list js-toc__list">
-                        <li class="toc__label" tabindex="0">Contents</li>
-                        <li><a class="toc__link js-smooth-scroll" href="#introduction">Introduction</a></li>
-                        <li><a class="toc__link js-smooth-scroll" href="#overview">Overview</a>
-                            <ul class="toc__list">
-                                <li><a class="toc__link js-smooth-scroll" href="#minting">Minting</a></li>
-                                <li><a class="toc__link js-smooth-scroll" href="#verifying-a-token">Verifying a token</a></li>
-                                <li><a class="toc__link js-smooth-scroll" href="#transferring-a-token">Transferring a token</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="toc__link js-smooth-scroll" href="#encoding">Encoding</a>
-                            <ul class="toc__list">
-                              <li><a class="toc__link js-smooth-scroll" href="#payload-structure">Payload structure</a></li>
-                              <li><a class="toc__link js-smooth-scroll" href="#protocols">Protocols</a></li>
-                              <li><a class="toc__link js-smooth-scroll" href="#file-encoding">File encoding</a></li>
-                              <li><a class="toc__link js-smooth-scroll" href="#hashstamp">HashStamp</a></li>
-                              <li><a class="toc__link js-smooth-scroll" href="#types">Types</a></li>
-                              <li><a class="toc__link js-smooth-scroll" href="#custom-fields">Custom fields</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="toc__link js-smooth-scroll" href="#fungible-tokens">Fungible tokens</a>
+<div class="container max-width-adaptive-lg margin-bottom-xs padding-y-md js-reading-content">
+  <div class="grid gap-md flex-row@md">
+      <div class="col-3@md">
+          <div class="toc toc--static@lg position-sticky@md js-toc"><button class="toc__control padding-sm no-js:hide js-toc__control" aria-controls="toc"><span class="toc__control-text"><i class="js-toc__control-label">Contents <span class="sr-only">- press button to select new section.</span></i> <i aria-hidden="true">Select</i> </span><svg class="toc__icon-arrow icon icon--xs margin-left-3xs no-js:hide" viewBox="0 0 16 16" aria-hidden="true">
+                      <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                          <path d="M3 3l10 10"></path>
+                          <path d="M13 3L3 13"></path>
+                      </g>
+                  </svg></button>
+              <nav class="toc__nav">
+                  <ul class="toc__list js-toc__list">
+                      <li class="toc__label" tabindex="0">Contents</li>
+                      <li><a class="toc__link js-smooth-scroll" href="#introduction">Introduction</a></li>
+                      <li><a class="toc__link js-smooth-scroll" href="#overview">Overview</a>
                           <ul class="toc__list">
-                            <li><a class="toc__link js-smooth-scroll" href="#ft-transfer">Transfer</a></li>
-                            <li><a class="toc__link js-smooth-scroll" href="#ft-melt">Melt</a></li>
+                              <li><a class="toc__link js-smooth-scroll" href="#minting">Minting</a></li>
+                              <li><a class="toc__link js-smooth-scroll" href="#verifying-a-token">Verifying a token</a></li>
+                              <li><a class="toc__link js-smooth-scroll" href="#transferring-a-token">Transferring a token</a></li>
                           </ul>
                       </li>
-                      <li><a class="toc__link js-smooth-scroll" href="#non-fungible-tokens">Non-fungible tokens</a>
-                        <ul class="toc__list">
-                          <li><a class="toc__link js-smooth-scroll" href="#nft-transfer">Transfer</a></li>
-                          <li><a class="toc__link js-smooth-scroll" href="#nft-melt">Melt</a></li>
-                        </ul>
-                      </li>
-                      <li><a class="toc__link js-smooth-scroll" href="#relationships">Relationships</a>
-                        <ul class="toc__list">
-                            <li><a class="toc__link js-smooth-scroll" href="#delegates">Delegates</a></li>
-                            <li><a class="toc__link js-smooth-scroll" href="#verifying-related-tokens">Verifying related tokens</a></li>
-                            <li><a class="toc__link js-smooth-scroll" href="#custom-relationships">Custom relationships</a></li>
-                        </ul>
-                      </li>
-                      <li><a class="toc__link js-smooth-scroll" href="#links">Links</a></li>
-                      <li><a class="toc__link js-smooth-scroll" href="#mutable-tokens">Mutable tokens</a>
-                        <ul class="toc__list">
-                          <li><a class="toc__link js-smooth-scroll" href="#pay-to-token">Pay to token</a></li>
-                          <li><a class="toc__link js-smooth-scroll" href="#fetching-mutable-data">Fetching mutable data</a></li>
-                          <li><a class="toc__link js-smooth-scroll" href="#script">Script</a></li>
-                          <li><a class="toc__link js-smooth-scroll" href="#unlocking-script">Unlocking script</a></li>
-                          <li><a class="toc__link js-smooth-scroll" href="#authorizing-an-update">Authorizing an update</a></li>
-                          <li><a class="toc__link js-smooth-scroll" href="#restoring-token-script">Restoring token script</a></li>
-                        </ul>
-                        <li><a class="toc__link js-smooth-scroll" href="#decentralized-mints">Decentralized mints</a>
+                      <li><a class="toc__link js-smooth-scroll" href="#encoding">Encoding</a>
                           <ul class="toc__list">
-                            <li><a class="toc__link js-smooth-scroll" href="#pow-algorithm">PoW algorithm</a></li>
-                            <li><a class="toc__link js-smooth-scroll" href="#further-information">Further information</a></li>
+                            <li><a class="toc__link js-smooth-scroll" href="#payload-structure">Payload structure</a></li>
+                            <li><a class="toc__link js-smooth-scroll" href="#protocols">Protocols</a></li>
+                            <li><a class="toc__link js-smooth-scroll" href="#file-encoding">File encoding</a></li>
+                            <li><a class="toc__link js-smooth-scroll" href="#hashstamp">HashStamp</a></li>
+                            <li><a class="toc__link js-smooth-scroll" href="#types">Types</a></li>
+                            <li><a class="toc__link js-smooth-scroll" href="#custom-fields">Custom fields</a></li>
                           </ul>
-                        </li>
-                        <li><a class="toc__link js-smooth-scroll" href="#electrumx">ElectrumX</a>
-                          <ul class="toc__list">
-                              <li><a class="toc__link js-smooth-scroll" href="#querying">Querying</a></li>
-                              <li><a class="toc__link js-smooth-scroll" href="#ref-get">Ref get</a></li>
-                              <li><a class="toc__link js-smooth-scroll" href="#list-unspent">List unspent</a></li>
-                          </ul>
-                        </li>
+                      </li>
+                      <li><a class="toc__link js-smooth-scroll" href="#fungible-tokens">Fungible tokens</a>
+                        <ul class="toc__list">
+                          <li><a class="toc__link js-smooth-scroll" href="#ft-transfer">Transfer</a></li>
+                          <li><a class="toc__link js-smooth-scroll" href="#ft-melt">Melt</a></li>
+                        </ul>
                     </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-        <div class="col-9@md">
-            <div class="text-component text-component--relaxed toc-content js-toc-content">
-                <h1 class="article-h1">Glyphs Protocol Tech Guide</h1>
-                <p class="text-md color-contrast-medium">How the Glyphs Protocol works on Radiant</p>
-                
-                <h2 class="toc-h2" id="introduction" class="toc-content__target">Introduction</h2>
-                <p>This is a guide to the Glyphs Protocol on the Radiant Blockchain.</p>
-                <p>Glyphs is a token standard utilizing Radiant's induction proof system and advanced scripting capabilities. Each token is identified by a Radiant reference (ref) and uses smart contracts for enforcing token transfer rules. Glyphs is a fully layer one protocol with all rules enforced by miners.</p>
-                <p>The Glyphs protocol operates efficiently with minimal indexing requirements, not requiring wallets or indexers to track each token transfer back to the mint. This allows wallets to efficiently verify tokens using SPV. This makes Glyphs a more secure, efficient and scalable system than layer two alternatives.</p>
-                <p>The protocol supports both fungible and non-fungible tokens. Fungible tokens use Radiant photons as the unit of account, with each fungible token backed by one photon. NFTs may be backed by any number of Radiant photons.</p>
-                <p>Token contracts are simple, concise and extensible, allowing composition with other custom contracts to support many complex use cases.</p>
-                <p>Glyphs is currently implemented in Photonic Wallet (Web App and Browser Extension) and Glyph Miner.</p>
-                <p>For support please join the Radiant community <a href="https://discord.gg/radiantblockchain" target="_blank">Discord server</a>.</p>
-
-                <h2 class="toc-h2" id="overview" class="toc-content__target">Overview</h2>
-                <p>Glyphs are implemented using Radiant's UTXO model and operate in a similar way to native Radiant photons. Radiant photons are "colored" with a Radiant ref which acts like a contract identifier for the token. A token is minted by creating a UTXO containing an amount of photons, a standard token contract and a Radiant ref. The contract along with the ref is carried forward with each spend. The contract and ref remain the same for the lifetime of the token, until it is melted.</p>
-                <p>With refs enforced by miners we can be certain a token is authentic simply by verifying block headers in the same way as native photons.</p>
-                <h3 class="toc-h3" id="minting" class="toc-content__target">Minting</h3>
-                <p>Glyphs are minted using a commit/reveal procedure with token metadata contained in the reveal transaction's unlocking script. The token's ref is created from an input to the reveal transaction. Therefore a glyph's ref will always point to a commit outpoint.</p>
-                <p>The token payload in the reveal transaction contains data such as name, image, ticker, relationships to other tokens etc.</p>
-                <p>The protocol does not dictate how the mint transaction should be created. Developers may use any locking script for the commit/reveal procedure, as long as the token payload is correctly encoded in the reveal.</p>
-                <p>For each ref that is required an input must be prepared. Radiant singleton refs are used for NFTs, so each NFT requires a unique ref.</p>
-                <h3 class="toc-h3" id="verifying-a-token" class="toc-content__target">Verifying a token</h3>
-                <p>When a wallet receives a token, it extracts the ref from the script and looks up the reveal transaction on the blockchain to obtain the token data.</p>
-                <p>For example, an NFT script:</p>
-
-<pre class="code-snippet"><code>OP_PUSHINPUTREFSINGLETON a32f3628a967ce64cca282262e63879136f9c3f4f8e1125345a85c71d90b10b401000000 OP_DROP
-OP_DUP OP_HASH160 3a23c6b9055b533db3900e4755dd58d1234c8582 OP_EQUALVERIFY OP_CHECKSIG</code></pre>
-
-                <p class="margin-top-sm">The ref <code class="break-word">a32f3628a967ce64cca282262e63879136f9c3f4f8e1125345a85c71d90b10b401000000</code> refers to an outpoint in a commit transaction.</p>
-                <p>The reveal will be the transaction that spent this output, with a token payload contained in the unlocking script.</p>
-                <p>Radiant's implementation of ElectrumX has been improved to simplify the process of finding the reveal transaction.</p>
-
-                <h3 class="toc-h3" id="transferring-a-token" class="toc-content__target">Transferring a token</h3>
-                <p>Transferring is done in much the same way as native Radiant photons. For NFTs, the UTXO is spent and the script is moved to a new output. Fungible tokens are similar, except since they use normal refs instead of singletons, token UTXOs may be split and merged.</p>
-                <p>Any number of different tokens may be provided as inputs and outputs of a transaction. Token transfer rules are all implemented in script, with token input and output values summed within script, ensuring token supply is enforced. Token UTXOs may be positioned anywhere in a transaction's inputs and outputs and there is no restriction on the number of token UTXOs. The Radiant opcodes used to sum token values operate over any number of inputs and outputs.</p>
+                    <li><a class="toc__link js-smooth-scroll" href="#non-fungible-tokens">Non-fungible tokens</a>
+                      <ul class="toc__list">
+                        <li><a class="toc__link js-smooth-scroll" href="#nft-transfer">Transfer</a></li>
+                        <li><a class="toc__link js-smooth-scroll" href="#nft-melt">Melt</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="toc__link js-smooth-scroll" href="#relationships">Relationships</a>
+                      <ul class="toc__list">
+                          <li><a class="toc__link js-smooth-scroll" href="#delegates">Delegates</a></li>
+                          <li><a class="toc__link js-smooth-scroll" href="#verifying-related-tokens">Verifying related tokens</a></li>
+                          <li><a class="toc__link js-smooth-scroll" href="#custom-relationships">Custom relationships</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="toc__link js-smooth-scroll" href="#links">Links</a></li>
+                    <li><a class="toc__link js-smooth-scroll" href="#mutable-tokens">Mutable tokens</a>
+                      <ul class="toc__list">
+                        <li><a class="toc__link js-smooth-scroll" href="#pay-to-token">Pay to token</a></li>
+                        <li><a class="toc__link js-smooth-scroll" href="#fetching-mutable-data">Fetching mutable data</a></li>
+                        <li><a class="toc__link js-smooth-scroll" href="#script">Script</a></li>
+                        <li><a class="toc__link js-smooth-scroll" href="#unlocking-script">Unlocking script</a></li>
+                        <li><a class="toc__link js-smooth-scroll" href="#authorizing-an-update">Authorizing an update</a></li>
+                        <li><a class="toc__link js-smooth-scroll" href="#restoring-token-script">Restoring token script</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="toc__link js-smooth-scroll" href="#decentralized-mints">Decentralized mints</a>
+                      <ul class="toc__list">
+                        <li><a class="toc__link js-smooth-scroll" href="#pow-algorithm">PoW algorithm</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="toc__link js-smooth-scroll" href="#electrumx">ElectrumX</a>
+                      <ul class="toc__list">
+                          <li><a class="toc__link js-smooth-scroll" href="#querying">Querying</a></li>
+                          <li><a class="toc__link js-smooth-scroll" href="#ref-get">Ref get</a></li>
+                          <li><a class="toc__link js-smooth-scroll" href="#list-unspent">List unspent</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+              </nav>
+          </div>
+      </div>
+      <div class="col-9@md">
+          <div class="text-component text-component--relaxed toc-content js-toc-content">
+              <h1 class="article-h1">Glyphs Protocol Tech Guide</h1>
+              <p class="text-md color-contrast-medium">How the Glyphs Protocol works on Radiant</p>
               
+              <h2 class="toc-h2" id="introduction" class="toc-content__target">Introduction</h2>
+              <p>This is a guide to the Glyphs Protocol on the Radiant Blockchain.</p>
+              <p>Glyphs is a token standard utilizing Radiant's induction proof system and advanced scripting capabilities. Each token is identified by a Radiant reference (ref) and uses smart contracts for enforcing token transfer rules. Glyphs is a fully layer one protocol with all rules enforced by miners.</p>
+              <p>The Glyphs protocol operates efficiently with minimal indexing requirements, not requiring wallets or indexers to track each token transfer back to the mint. This allows wallets to efficiently verify tokens using SPV. This makes Glyphs a more secure, efficient and scalable system than layer two alternatives.</p>
+              <p>The protocol supports both fungible and non-fungible tokens. Fungible tokens use Radiant photons as the unit of account, with each fungible token backed by one photon. NFTs may be backed by any number of Radiant photons.</p>
+              <p>Token contracts are simple, concise and extensible, allowing composition with other custom contracts to support many complex use cases.</p>
+              <p>Glyphs is currently implemented in Photonic Wallet (Web App and Browser Extension) and Glyph Miner.</p>
+              <p>For support please join the Radiant community <a href="https://discord.gg/radiantblockchain" target="_blank">Discord server</a>.</p>
 
-                <h2 class="toc-h2" id="encoding" class="toc-content__target">Encoding</h2>
-                <p>Acquiring and holding RXD coins is a fundamental way to support the Radiant ecosystem. Your participation in the coin and token economy helps drive growth and stability. More holders and Radiant ecosystem participants can strengthen the lindy effect. Here's why buying RXD matters:</p>
-                <h3 class="toc-h3" id="payload-structure" class="toc-content__target">Payload structure</h3>
-                <p>A glyph's token data is encoded in the reveal unlocking script, identified by the string "gly" followed by a CBOR encoded token payload:</p>
-<pre class="code-snippet"><code>OP_PUSH "gly"
+              <h2 class="toc-h2" id="overview" class="toc-content__target">Overview</h2>
+              <p>Glyphs are implemented using Radiant's UTXO model and operate in a similar way to native Radiant photons. Radiant photons are "colored" with a Radiant ref which acts like a contract identifier for the token. A token is minted by creating a UTXO containing an amount of photons, a standard token contract and a Radiant ref. The contract along with the ref is carried forward with each spend. The contract and ref remain the same for the lifetime of the token, until it is melted.</p>
+              <p>With refs enforced by miners we can be certain a token is authentic simply by verifying block headers in the same way as native photons.</p>
+              
+              <h3 class="toc-h3" id="minting" class="toc-content__target">Minting</h3>
+              <p>Glyphs are minted using a commit/reveal procedure with token metadata contained in the reveal transaction's unlocking script. The token's ref is created from an input to the reveal transaction. Therefore a glyph's ref will always point to a commit outpoint.</p>
+              <p>The token payload in the reveal transaction contains data such as name, image, ticker, relationships to other tokens etc.</p>
+              <p>The protocol does not dictate how the mint transaction should be created. Developers may use any locking script for the commit/reveal procedure, as long as the token payload is correctly encoded in the reveal.</p>
+              <p>For each ref that is required an input must be prepared. Radiant singleton refs are used for NFTs, so each NFT requires a unique ref.</p>
+              
+              <h3 class="toc-h3" id="verifying-a-token" class="toc-content__target">Verifying a token</h3>
+              <p>When a wallet receives a token, it extracts the ref from the script and looks up the reveal transaction on the blockchain to obtain the token data.</p>
+              <p>For example, an NFT script:</p>
+              <pre class="code-snippet"><code>OP_PUSHINPUTREFSINGLETON a32f3628a967ce64cca282262e63879136f9c3f4f8e1125345a85c71d90b10b401000000 OP_DROP
+OP_DUP OP_HASH160 3a23c6b9055b533db3900e4755dd58d1234c8582 OP_EQUALVERIFY OP_CHECKSIG</code></pre>
+              <p class="margin-top-sm">The ref <code class="break-word">a32f3628a967ce64cca282262e63879136f9c3f4f8e1125345a85c71d90b10b401000000</code> refers to an outpoint in a commit transaction.</p>
+              <p>The reveal will be the transaction that spent this output, with a token payload contained in the unlocking script.</p>
+              <p>Radiant's implementation of ElectrumX has been improved to simplify the process of finding the reveal transaction.</p>
+
+              <h3 class="toc-h3" id="transferring-a-token" class="toc-content__target">Transferring a token</h3>
+              <p>Transferring is done in much the same way as native Radiant photons. For NFTs, the UTXO is spent and the script is moved to a new output. Fungible tokens are similar, except since they use normal refs instead of singletons, token UTXOs may be split and merged.</p>
+              <p>Any number of different tokens may be provided as inputs and outputs of a transaction. Token transfer rules are all implemented in script, with token input and output values summed within script, ensuring token supply is enforced. Token UTXOs may be positioned anywhere in a transaction's inputs and outputs and there is no restriction on the number of token UTXOs. The Radiant opcodes used to sum token values operate over any number of inputs and outputs.</p>
+
+              <h2 class="toc-h2" id="encoding" class="toc-content__target">Encoding</h2>
+              <p>A glyph's token data is encoded in the reveal unlocking script, identified by the string "gly" followed by a CBOR encoded token payload:</p>
+              <pre class="code-snippet"><code>OP_PUSH "gly"
 OP_PUSH &lt;CBOR Payload&gt;</code></pre>
-                
 
-                <h3 class="toc-h3" id="payload-structure" class="toc-content__target">Payload structure</h3>
-                <p>The Glyphs protocol defines standard top level fields shown below in CDDL:</p>
-<pre class="code-snippet"><code>payload = {
+              <h3 class="toc-h3" id="payload-structure" class="toc-content__target">Payload structure</h3>
+              <p>The Glyphs protocol defines standard top level fields shown below in CDDL:</p>
+              <pre class="code-snippet"><code>payload = {
   p: [* (number / string)]       ; Array of protocol identifiers
   name: tstr,                    ; Name of the token
   ? type: tstr,                  ; Type of the token (e.g. container, user or other custom types)
@@ -355,12 +350,12 @@ OP_PUSH &lt;CBOR Payload&gt;</code></pre>
     t: tstr,                     ; File mime type
     b: bstr                      ; File bytes
   },
-  ? attrs: { * tstr => any }     ; Attributes as key value pairs (e.g. color, rarity, etc)
+  ? attrs: { * tstr =&gt; any }     ; Attributes as key value pairs (e.g. color, rarity, etc)
   ? loc: number / bytes / string ; Location for link tokens
 }</code></pre>
 
-                <p class="margin-top-sm">Example CBOR payload:</p>
-<pre class="code-snippet"><code>{
+              <p class="margin-top-sm">Example CBOR payload:</p>
+              <pre class="code-snippet"><code>{
     p: [1, 4],
     name: "My token",
     ticker: "XYZ",
@@ -376,94 +371,98 @@ OP_PUSH &lt;CBOR Payload&gt;</code></pre>
     ],
 }</code></pre>
 
-                <h2 class="toc-h2" id="protocols" class="toc-content__target">Protocols</h2>
-                <p>The <code>p</code> property contains an array of protocols used by the token. Current protocol identifiers are as follows:</p>
-                
-                <div class="tbl">
-                  <table class="tbl__table text-unit-em text-sm border-bottom border-2" aria-label="Protocols">
-                    <thead class="tbl__header border-bottom border-2">
-                      <tr class="tbl__row">
-                        <th class="tbl__cell text-left" scope="col"><span
-                            class="text-sm text-uppercase letter-spacing-lg font-semibold">ID</span></th>
-                        <th class="tbl__cell text-left" scope="col"><span
-                            class="text-sm text-uppercase letter-spacing-lg font-semibold">Protocol</span></th>
-                      </tr>
-                    </thead>
-                    <tbody class="tbl__body">
-                      <tr class="tbl__row">
-                        <td class="tbl__cell" role="cell">
-                          <div class="flex items-center">
-                            <div class="line-height-xs"><div class="flex items-center">
-                              <p class="code-title margin-bottom-4xs">1</p>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="tbl__cell" role="cell">Fungible token</td>
-                      </tr>
-                      <tr class="tbl__row">
-                        <td class="tbl__cell" role="cell">
-                          <div class="flex items-center">
-                            <div class="line-height-xs">
-                              <p class="code-title margin-bottom-4xs">2</p>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="tbl__cell" role="cell">Non-fungible token</td>
-                      </tr>
-                      <tr class="tbl__row">
-                        <td class="tbl__cell" role="cell">
-                          <div class="flex items-center">
-                            <div class="line-height-xs">
-                              <p class="code-title margin-bottom-4xs">3</p>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="tbl__cell" role="cell">Data storage</td>
-                      </tr>
-                      <tr class="tbl__row">
-                        <td class="tbl__cell" role="cell">
-                          <div class="flex items-center">
-                            <div class="line-height-xs">
-                              <p class="code-title margin-bottom-4xs">4</p>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="tbl__cell" role="cell">Decentralized mint</td>
-                      </tr>
-                      <tr class="tbl__row">
-                        <td class="tbl__cell" role="cell">
-                          <div class="flex items-center">
-                            <div class="line-height-xs">
-                              <p class="code-title margin-bottom-4xs">5</p>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="tbl__cell" role="cell">Mutable</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+              <h2 class="toc-h2" id="protocols" class="toc-content__target">Protocols</h2>
+              <p>The <code>p</code> property contains an array of protocols used by the token. Current protocol identifiers are as follows:</p>
+              
+              <div class="tbl">
+                <table class="tbl__table text-unit-em text-sm border-bottom border-2" aria-label="Protocols">
+                  <thead class="tbl__header border-bottom border-2">
+                    <tr class="tbl__row">
+                      <th class="tbl__cell text-left" scope="col"><span class="text-sm text-uppercase letter-spacing-lg font-semibold">ID</span></th>
+                      <th class="tbl__cell text-left" scope="col"><span class="text-sm text-uppercase letter-spacing-lg font-semibold">Protocol</span></th>
+                      <th class="tbl__cell text-left" scope="col"><span class="text-sm text-uppercase letter-spacing-lg font-semibold">Notes</span></th>
+                    </tr>
+                  </thead>
+                  <tbody class="tbl__body">
+                    <tr class="tbl__row">
+                      <td class="tbl__cell" role="cell"><p class="code-title margin-bottom-4xs">1</p></td>
+                      <td class="tbl__cell" role="cell">Fungible token (FT)</td>
+                      <td class="tbl__cell" role="cell">Token amount = UTXO photon value; no separate amount field</td>
+                    </tr>
+                    <tr class="tbl__row">
+                      <td class="tbl__cell" role="cell"><p class="code-title margin-bottom-4xs">2</p></td>
+                      <td class="tbl__cell" role="cell">Non-fungible token (NFT)</td>
+                      <td class="tbl__cell" role="cell">Unique via <code>OP_PUSHINPUTREFSINGLETON</code> (<code>0xd8</code>)</td>
+                    </tr>
+                    <tr class="tbl__row">
+                      <td class="tbl__cell" role="cell"><p class="code-title margin-bottom-4xs">3</p></td>
+                      <td class="tbl__cell" role="cell">Data storage (DAT)</td>
+                      <td class="tbl__cell" role="cell"></td>
+                    </tr>
+                    <tr class="tbl__row">
+                      <td class="tbl__cell" role="cell"><p class="code-title margin-bottom-4xs">4</p></td>
+                      <td class="tbl__cell" role="cell">Decentralized mint (dMint)</td>
+                      <td class="tbl__cell" role="cell">Always combined with a base type; FT dMint is <code>[1, 4]</code></td>
+                    </tr>
+                    <tr class="tbl__row">
+                      <td class="tbl__cell" role="cell"><p class="code-title margin-bottom-4xs">5</p></td>
+                      <td class="tbl__cell" role="cell">Mutable (MUT)</td>
+                      <td class="tbl__cell" role="cell">Mutable on-chain state</td>
+                    </tr>
+                    <tr class="tbl__row">
+                      <td class="tbl__cell" role="cell"><p class="code-title margin-bottom-4xs">6</p></td>
+                      <td class="tbl__cell" role="cell">Explicit burn</td>
+                      <td class="tbl__cell" role="cell"></td>
+                    </tr>
+                    <tr class="tbl__row">
+                      <td class="tbl__cell" role="cell"><p class="code-title margin-bottom-4xs">7</p></td>
+                      <td class="tbl__cell" role="cell">Container / Collection</td>
+                      <td class="tbl__cell" role="cell">Parent-only; children reference it via the <code>in</code> field</td>
+                    </tr>
+                    <tr class="tbl__row">
+                      <td class="tbl__cell" role="cell"><p class="code-title margin-bottom-4xs">8</p></td>
+                      <td class="tbl__cell" role="cell">Encrypted content</td>
+                      <td class="tbl__cell" role="cell">Requires an NFT base type</td>
+                    </tr>
+                    <tr class="tbl__row">
+                      <td class="tbl__cell" role="cell"><p class="code-title margin-bottom-4xs">9</p></td>
+                      <td class="tbl__cell" role="cell">Timelocked reveal</td>
+                      <td class="tbl__cell" role="cell">Requires <code>[8]</code></td>
+                    </tr>
+                    <tr class="tbl__row">
+                      <td class="tbl__cell" role="cell"><p class="code-title margin-bottom-4xs">10</p></td>
+                      <td class="tbl__cell" role="cell">Issuer authority</td>
+                      <td class="tbl__cell" role="cell"></td>
+                    </tr>
+                    <tr class="tbl__row">
+                      <td class="tbl__cell" role="cell"><p class="code-title margin-bottom-4xs">11</p></td>
+                      <td class="tbl__cell" role="cell">WAVE naming</td>
+                      <td class="tbl__cell" role="cell">On-chain naming; canonical name lives in <code>attrs.name</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
 
-                <p class="margin-top-sm">Some protocols may depend on other protocols also being implemented. For example for a mineable token, a <code>p</code> value of <code>[1, 4]</code> must be used, indicating the token implements the FT and dmint contracts.</p>
+              <p class="margin-top-sm">IDs 1–5 are the v1 set; IDs 6–11 are defined in the Glyph v2 Token Standard. See the Glyph v2 Token Standard Whitepaper (§3.4 / Appendix A) for the authoritative registry. IDs 12–255 are reserved.</p>
+              <p>Some protocols may depend on other protocols also being implemented. For example for a mineable token, a <code>p</code> value of <code>[1, 4]</code> must be used, indicating the token implements the FT and dmint contracts.</p>
 
+              <h3 class="toc-h3" id="file-encoding" class="toc-content__target">File encoding</h3>
+              <p>In addition to the <code>main</code> property other files can be added to the payload. These can be either embedded or remote.</p>
+              <p><strong>Embed:</strong></p>
+              <pre class="code-snippet"><code>embed = {
+  t: tstr,  ; File mime type
+  b: bstr   ; File bytes
+}</code></pre>
+              <p class="margin-top-sm"><strong>Remote:</strong></p>
+              <pre class="code-snippet"><code>remote = {
+  t: tstr,   ; File mime type
+  u: tstr    ; URL
+  ? h: bstr  ; File hash
+  ? hs: bstr ; HashStamp image (low resolution copy of image)
+}</code></pre>
 
-                <h3 class="toc-h3" id="file-encoding" class="toc-content__target">File encoding</h3>
-                <p>In addition to the <code>main</code> property other files can be added to the payload. These can be either embedded or remote.</p>
-                <p>Embed:</p>
-                <pre class="code-snippet"><code>  embed = {
-    t: tstr, ; File mime type
-    b: bstr  ; File bytes
-  }</code></pre>
-                <p class="margin-top-sm">Remote:</p>
-                <pre class="code-snippet"><code>  remote = {
-    t: tstr,   ; File mime type
-    u: tstr    ; URL
-    ? h: bstr  ; File hash
-    ? hs: bstr ; HashStamp image (low resolution copy of image)
-  }</code></pre>
-
-                <p class="margin-top-sm">Example:</p>
-                <pre class="code-snippet"><code>{
+              <p class="margin-top-sm"><strong>Example:</strong></p>
+              <pre class="code-snippet"><code>{
     main: {
         t: "image/jpeg",
         b: &lt;bytes&gt; // File bytes embedded in transaction
@@ -475,24 +474,23 @@ OP_PUSH &lt;CBOR Payload&gt;</code></pre>
         hs: &lt;hashStampBytes&gt;
     }
 }</code></pre>
-                <p class="margin-top-sm">If a link to a remote file is used, it is recommended to include a hash so the downloaded file can be verified.</p>
+              <p class="margin-top-sm">If a link to a remote file is used, it is recommended to include a hash so the downloaded file can be verified.</p>
 
-                <h3 class="toc-h3" id="hashstamp" class="toc-content__target">HashStamp</h3>
-                <p>For remote images a HashStamp may be provided in the <code>hs</code> property. This is a low resolution, highly compressed copy of the image in WebP format. This may be desirable for people who want to store data off-chain but still have some representation of the file on-chain. It is recommended to keep HashStamps within 64x64 pixels and quality 20 to keep size to a minimum.</p>
-                <p>HashStamps can be used by wallets to display a version of the image if downloading the file is deemed insecure, or used as a loading placeholder similar to a BlurHash.</p>
+              <h3 class="toc-h3" id="hashstamp" class="toc-content__target">HashStamp</h3>
+              <p>For remote images a HashStamp may be provided in the <code>hs</code> property. This is a low resolution, highly compressed copy of the image in WebP format. This may be desirable for people who want to store data off-chain but still have some representation of the file on-chain. It is recommended to keep HashStamps within 64x64 pixels and quality 20 to keep size to a minimum.</p>
+              <p>HashStamps can be used by wallets to display a version of the image if downloading the file is deemed insecure, or used as a loading placeholder similar to a BlurHash.</p>
 
-                <h3 class="toc-h3" id="types" class="toc-content__target">Types</h3>
-                <p>The Glyphs protocol uses types <code>container</code> and <code>user</code>, for allowing the creation of collections and associating tokens to a creator. Wallets should implement these types and render the tokens accordingly.</p>
-                <p>Custom types are also permitted.</p>
-                
-                <h3 class="toc-h3" id="custom-fields" class="toc-content__target">Custom fields</h3>
-                <p>Any custom fields may be added to the payload.</p>
+              <h3 class="toc-h3" id="types" class="toc-content__target">Types</h3>
+              <p>The Glyphs protocol uses types <code>container</code> and <code>user</code>, for allowing the creation of collections and associating tokens to a creator. Wallets should implement these types and render the tokens accordingly.</p>
+              <p>Custom types are also permitted.</p>
+              
+              <h3 class="toc-h3" id="custom-fields" class="toc-content__target">Custom fields</h3>
+              <p>Any custom fields may be added to the payload.</p>
 
-                <h2 class="toc-h2" id="fungible-tokens" class="toc-content__target">Fungible tokens</h2>
-                <p>Fungible tokens must be created with the protocol <code>p</code> field set to <code>1</code>. This informs wallets that the token uses a standard fungible token script.</p>
-                <p>The script is a P2PKH followed by a script to enforce fungible token rules:</p>
-
-                <pre class="code-snippet"><code>// P2PKH
+              <h2 class="toc-h2" id="fungible-tokens" class="toc-content__target">Fungible tokens</h2>
+              <p>Fungible tokens must be created with the protocol <code>p</code> field set to <code>1</code>. This informs wallets that the token uses a standard fungible token script.</p>
+              <p>The script is a P2PKH followed by a script to enforce fungible token rules:</p>
+              <pre class="code-snippet"><code>// P2PKH
 OP_DUP OP_HASH160 &lt;address&gt; OP_EQUALVERIFY OP_CHECKSIG
 
 OP_STATESEPARATOR
@@ -518,84 +516,77 @@ OP_GREATERTHANOREQUAL OP_VERIFY
 // To prevent supply inflation, ref must be used within this script and ref count must be equal to contract count
 OP_CODESCRIPTHASHOUTPUTCOUNT_OUTPUTS OP_NUMEQUALVERIFY</code></pre>
 
-                <p class="margin-top-sm">The script after the P2PKH must be unchanged for every transfer.</p>
-                <p>The protocol permits locking scripts other than P2PKH, such as multisig, time locks and other more complex scripts. The only requirement is that the script after the state separator is unchanged.</p>
+              <p class="margin-top-sm">The script after the P2PKH must be unchanged for every transfer.</p>
+              <p>The protocol permits locking scripts other than P2PKH, such as multisig, time locks and other more complex scripts. The only requirement is that the script after the state separator is unchanged.</p>
 
-                <h3 class="toc-h3" id="ft-transfer" class="toc-content__target">Transfer</h3>
-                <p>Tokens are transferred in a similar way to regular RXD photons. The contract and ref are carried forward with each spend and UTXOs can be split and merged. Tokens may be at any position in the inputs or outputs. A transaction may also contain any number of different tokens.</p>
-                
-                <h3 class="toc-h3" id="ft-melt" class="toc-content__target">Melt</h3>
-                <p>The contract permits output value sum to be less than input value sum. Melting fungible tokens only requires making the output value less than input value. The RXD photons backing the tokens are then reclaimed.</p>
+              <h3 class="toc-h3" id="ft-transfer" class="toc-content__target">Transfer</h3>
+              <p>Tokens are transferred in a similar way to regular RXD photons. The contract and ref are carried forward with each spend and UTXOs can be split and merged. Tokens may be at any position in the inputs or outputs. A transaction may also contain any number of different tokens.</p>
+              
+              <h3 class="toc-h3" id="ft-melt" class="toc-content__target">Melt</h3>
+              <p>The contract permits output value sum to be less than input value sum. Melting fungible tokens only requires making the output value less than input value. The RXD photons backing the tokens are then reclaimed.</p>
 
-
-                <h2 class="toc-h2" id="non-fungible-tokens" class="toc-content__target">Non-fungible tokens</h2>
-                <p>Non-fungible tokens must be created with the protocol <code>p</code> field set to <code>2</code>.</p>
-                <p>The script is simply a singleton ref followed by a P2PKH or other locking script:</p>
-
-                <pre class="code-snippet"><code>OP_PUSHINPUTREFSINGLETON &lt;ref&gt; OP_DROP
+              <h2 class="toc-h2" id="non-fungible-tokens" class="toc-content__target">Non-fungible tokens</h2>
+              <p>Non-fungible tokens must be created with the protocol <code>p</code> field set to <code>2</code>.</p>
+              <p>The script is simply a singleton ref followed by a P2PKH or other locking script:</p>
+              <pre class="code-snippet"><code>OP_PUSHINPUTREFSINGLETON &lt;ref&gt; OP_DROP
 OP_DUP OP_HASH160 &lt;address&gt; OP_EQUALVERIFY OP_CHECKSIG // P2PKH</code></pre>
+              <p class="margin-top-sm">Radiant rules enforce that there can only ever be one instance of a singleton ref.</p>
+              
+              <h3 class="toc-h3" id="nft-transfer" class="toc-content__target">Transfer</h3>
+              <p>NFTs are transferred in a similar way to regular RXD photons. The singleton ref is carried forward with each spend and may be at any position in the transaction inputs or outputs.</p>
+              <p>Similar to fungible tokens, any number of different tokens may be present in a transaction.</p>
 
-                <p class="margin-top-sm">Radiant rules enforce that there can only ever be one instance of a singleton ref.</p>
-                
-                <h3 class="toc-h3" id="nft-transfer" class="toc-content__target">Transfer</h3>
-                <p>NFTs are transferred in a similar way to regular RXD photons. The singleton ref is carried forward with each spend and may be at any position in the transaction inputs or outputs.</p>
-                <p>Similar to fungible tokens, any number of different tokens may be present in a transaction.</p>
+              <h3 class="toc-h3" id="nft-melt" class="toc-content__target">Melt</h3>
+              <p>Melting a non-fungible token can be done in two ways:</p>
+              <ul class="opcode-terms-list list list--ul">
+                <li>Omit the ref from the outputs</li>
+                <li>Spend the NFT to an unspendable op return script containing the ref</li>
+              </ul>
 
-                <h3 class="toc-h3" id="nft-melt" class="toc-content__target">Melt</h3>
-                <p>Melting a non-fungible token can be done in two ways:</p>
+              <h2 class="toc-h2" id="relationships" class="toc-content__target">Relationships</h2>
+              <p>The Glyph protocol provides <code>in</code> and <code>by</code> arrays in the token payload for defining relationships to other tokens, such as NFT collections. Relationships can also be defined in custom properties.</p>
+              <p>For a token to be related its ref must be present in the commit transaction. Wallets must verify this by checking each related token's ref is in an output of the commit. This prevents unauthorized users creating relationships, such as assigning an author or adding NFTs to a collection they don't control.</p>
 
-                <ul class="opcode-terms-list list list--ul">
-                  <li>Omit the ref from the outputs</li>
-                  <li>Spend the NFT to an unspendable op return script containing the ref</li>
-                </ul>
-
-                <h2 class="toc-h2" id="relationships" class="toc-content__target">Relationships</h2>
-                <p>The Glyph protocol provides <code>in</code> and <code>by</code> arrays in the token payload for defining relationships to other tokens, such as NFT collections. Relationships can also be defined in custom properties.</p>
-                <p>For a token to be related its ref must be present in the commit transaction. Wallets must verify this by checking each related token's ref is in an output of the commit. This prevents authorized users creating relationships, such as assigning an author or adding NFTs to a collection they don't control.</p>
-
-                <h3 class="toc-h3" id="delegates" class="toc-content__target">Delegates</h3>
-                <p>Having a related token in a commit is not always practical if there are many thousands of mint transactions with the same relationship. For example, minting a large NFT collection with the same container and author tokens. To solve this a token delegate may be used.</p>
-                <p>The delegate is a temporary normal ref that links to one or more token refs such as a user or container token.</p>
-                <p>A delegate is created by a transaction containing the related tokens, and one or more outputs with the following script:</p>
-
-                <pre class="code-snippet"><code>OP_PUSHINPUTREF &lt;ref&gt; OP_DROP
+              <h3 class="toc-h3" id="delegates" class="toc-content__target">Delegates</h3>
+              <p>Having a related token in a commit is not always practical if there are many thousands of mint transactions with the same relationship. For example, minting a large NFT collection with the same container and author tokens. To solve this a token delegate may be used.</p>
+              <p>The delegate is a temporary normal ref that links to one or more token refs such as a user or container token.</p>
+              <p>A delegate is created by a transaction containing the related tokens, and one or more outputs with the following script:</p>
+              <pre class="code-snippet"><code>OP_PUSHINPUTREF &lt;ref&gt; OP_DROP
 OP_DUP OP_HASH160 &lt;address&gt; OP_EQUALVERIFY OP_CHECKSIG // P2PKH</code></pre>
-                <p class="margin-top-sm">Any number of delegates may be created to simplify bulk mints.</p>
+              <p class="margin-top-sm">Any number of delegates may be created to simplify bulk mints.</p>
 
-                <h3 class="toc-h3" id="verifying-related-tokens" class="toc-content__target">Verifying related tokens</h3>
-                <p>When a wallet does not find a related token's ref in the commit transaction, it must look for delegates within the commit script. Delegate refs must be required using a <code>OP_REQUIREINPUTREF</code> opcode in the commit script.</p>
-                <p>If the wallet finds required refs, it fetches the delegate creation transaction and looks for related tokens in its outputs. If the refs are found in the delegate creation transaction then the relationship is valid.</p>
+              <h3 class="toc-h3" id="verifying-related-tokens" class="toc-content__target">Verifying related tokens</h3>
+              <p>When a wallet does not find a related token's ref in the commit transaction, it must look for delegates within the commit script. Delegate refs must be required using a <code>OP_REQUIREINPUTREF</code> opcode in the commit script.</p>
+              <p>If the wallet finds required refs, it fetches the delegate creation transaction and looks for related tokens in its outputs. If the refs are found in the delegate creation transaction then the relationship is valid.</p>
 
-                <h3 class="toc-h3" id="custom-relationships" class="toc-content__target">Custom relationships</h3>
-                <p>Developers are free to define their own relationships separate to the <code>in</code> and <code>by</code> arrays.</p>
+              <h3 class="toc-h3" id="custom-relationships" class="toc-content__target">Custom relationships</h3>
+              <p>Developers are free to define their own relationships separate to the <code>in</code> and <code>by</code> arrays.</p>
 
+              <h2 class="toc-h2" id="links" class="toc-content__target">Links</h2>
+              <p>Tokens may be linked to any resource, either tokens or off-chain resources. This has many uses such as creating a record of a token mint or even building a decentralized redirect service.</p>
+              <p>Links are created using the <code>loc</code> field which is used by wallets in a similar way to the HTTP location header.</p>
+              <p>To create a link the <code>loc</code> field is set to either a number, bytes or string:</p>
+              <pre class="code-snippet"><code>location = number / bytes / string</code></pre>
+              <ul class="margin-top-sm opcode-terms-list list list--ul">
+                <li><code>number</code> — Link to a token with given output index and transaction ID matching the link ref</li>
+                <li><code>bytes</code> — Link to a token given as ref bytes</li>
+                <li><code>string</code> — Link to any URI</li>
+              </ul>
 
-                <h2 class="toc-h2" id="links" class="toc-content__target">Links</h2>
-                <p>Tokens may be linked to any resource, either tokens or off-chain resources. This has many uses such as creating a record of a token mint or even building a decentralized redirect service.</p>
-                <p>Links are created using the <code>loc</code> field which is used by wallets in a similar way to the HTTP location header.</p>
-                <p>To create a link the <code>loc</code> field is set to either a number, bytes or string:</p>
-                <pre class="code-snippet"><code> location = number / bytes / string</code></pre>
-                <ul class="margin-top-sm opcode-terms-list list list--ul">
-                  <li><code>number</code> - Link to a token with given output index and transaction ID matching the link ref</li>
-                  <li><code>bytes</code> - Link to a token given as ref bytes</li>
-                  <li><code>string</code> - Link to any URI</li>
-                </ul>
+              <h2 class="toc-h2" id="mutable-tokens" class="toc-content__target">Mutable tokens</h2>
+              <p>Token payloads can be made mutable by using a mutability contract and adding protocol <code>5</code> to the <code>p</code> array in the token payload.</p>
+              <p>The mutability contract must be created in the mint transaction and assigned a singleton ref with an output index one higher than the token ref (token ref + 1).</p>
+              <p>The contract uses a "pay to token" script which does not contain a P2PKH or any signature checking opcodes. The contract requires the token to be present in the transaction in order to modify the payload.</p>
+              <p>Modify (<code>mod</code>) and seal (<code>sl</code>) operations are implemented. Seal is called to make the token immutable and enforces burning of the mutability contract.</p>
 
+              <h3 class="toc-h3" id="pay-to-token" class="toc-content__target">Pay to token</h3>
+              <p>With a "pay to token" script, the mutability contract is always controlled by the token owner. This means every time a token is transferred to a new owner, they automatically get access to updating the token's data. The mutability output never needs to be transferred, only called to update the data.</p>
 
-                <h2 class="toc-h2" id="mutable-tokens" class="toc-content__target">Mutable tokens</h2>
-                <p>Token payloads can be made mutable by using a mutability contract and adding protocol <code>5</code> to the <code>p</code> array in the token payload.</p>
-                <p>The mutability contract must be created in the mint transaction and assigned a singleton ref with an output index one higher than the token ref (token ref + 1).</p>
-                <p>The contract uses a "pay to token" script which does not contain a P2PKH or any signature checking opcodes. The contract requires the token to be present in the transaction in order to modify the payload.</p>
-                <p>Modify <code>mod</code> and seal <code>sl</code> operation are implemented. Seal is called to make the token immutable and enforces burning of the mutability contract.</p>
-
-                <h3 class="toc-h3" id="pay-to-token" class="toc-content__target">Pay to token</h3>
-                <p>With a "pay to token" script, the mutability contract is always controlled by the token owner. This means every time a token is transferred to a new owner, they automatically get access to updating the token's data. The mutability output never needs to be transferred, only called to update the data.</p>
-
-                <h3 class="toc-h3" id="fetching-mutable-data" class="toc-content__target">Fetching mutable data</h3>
-                <p>If a wallet receives a mutable token, the most recent data can be obtained by looking up the most recent location of the mutability ref and fetching the transaction. Data is encoded similar to a token mint, with the Glyph token payload in the unlocking script.</p>
-                
-                <h3 class="toc-h3" id="script" class="toc-content__target">Script</h3>
-                <pre class="code-snippet"><code>// SHA256 of payload must be provided
+              <h3 class="toc-h3" id="fetching-mutable-data" class="toc-content__target">Fetching mutable data</h3>
+              <p>If a wallet receives a mutable token, the most recent data can be obtained by looking up the most recent location of the mutability ref and fetching the transaction. Data is encoded similar to a token mint, with the Glyph token payload in the unlocking script.</p>
+              
+              <h3 class="toc-h3" id="script" class="toc-content__target">Script</h3>
+              <pre class="code-snippet"><code>// SHA256 of payload must be provided
 &lt;payloadHash&gt; OP_DROP
 
 OP_STATESEPARATOR
@@ -627,11 +618,11 @@ OP_2 OP_PICK 736c OP_EQUALVERIFY OP_OVER OP_OUTPUTBYTECODE d8 OP_2 OP_PICK OP_CA
 // Glyph header
 OP_4 OP_ROLL ${glyphMagicBytesHex} OP_EQUALVERIFY OP_2DROP OP_2DROP OP_1</code></pre>
 
-                <h3 class="toc-h3" id="unlocking-script" class="toc-content__target">Unlocking script</h3>
-                <p>In order to use a "pay to token" contract securely, the data must be signed. Without a signature check opcode in the contract, this must be done in a different way.</p>
-                <p>The contract requires the token owner to provide the token as an input. In the token's output it must include a hash of the mutability contract's unlocking script. This way, the token owner signs the updated data in the token output, the contract verifies it, and the transaction is not vulnerable to malleation. In addition to the unlocking script hash, the output must have an <code>OP_REQUIREINPUTREF</code> requiring the mutability contract as an input. This ref + hash pair is checked by the mutability contract.</p>
-                <p>To spend the contract the following parameters must be provided in the unlocking script</p>               
-                <pre class="code-snippet"><code>OP_PUSH gly
+              <h3 class="toc-h3" id="unlocking-script" class="toc-content__target">Unlocking script</h3>
+              <p>In order to use a "pay to token" contract securely, the data must be signed. Without a signature check opcode in the contract, this must be done in a different way.</p>
+              <p>The contract mandates that the token owner furnish the token as input. The token’s output must contain a hash of the mutability contract’s unlocking script. This ensures that the token owner affixes their signature to the updated data in the token output, the contract verifies it, and the transaction remains impervious to manipulation. In addition to the unlocking script hash, the output must have an <code>OP_REQUIREINPUTREF</code> requiring the mutability contract as an input. This ref + hash pair is checked by the mutability contract.</p>
+              <p>To spend the contract the following parameters must be provided in the unlocking script:</p>
+              <pre class="code-snippet"><code>OP_PUSH gly
 OP_PUSH mod // Modify operation
 OP_PUSH &lt;cbor payload&gt; // Updated token payload
 OP_PUSH &lt;contract output index&gt; // Location of mutability contract UTXO in outputs
@@ -639,10 +630,9 @@ OP_PUSH &lt;ref+hash index in token output&gt; // Index of the ref+hash in the t
 OP_PUSH &lt;ref index in token output data summary&gt; // Position of token ref in OP_REFDATASUMMARY_OUTPUT (the sorted list of refs used in all outputs)
 OP_PUSH &lt;token output index&gt; // Location of token UTXO in outputs</code></pre>
 
-                <h3 class="toc-h3" id="authorizing-an-update" class="toc-content__target">Authorizing an update</h3>
-                <p>To authorize this update, the token output must have the hash of the above unlocking script following an <code>OP_REQUIREINPUTREF</code>. For example:</p>
-                
-                <pre class="code-snippet"><code>// Require the mutability contract (token ref + 1)
+              <h3 class="toc-h3" id="authorizing-an-update" class="toc-content__target">Authorizing an update</h3>
+              <p>To authorize this update, the token output must have the hash of the above unlocking script following an <code>OP_REQUIREINPUTREF</code>. For example:</p>
+              <pre class="code-snippet"><code>// Require the mutability contract (token ref + 1)
 OP_REQUIREINPUTREF a32f3628a967ce64cca282262e63879136f9c3f4f8e1125345a85c71d90b10b402000000
 // Hash of mutability contract's unlocking script
 OP_PUSH a204a95c54bf73975256898be5f47d7844146845f9b749408b535d12e3ad85a9
@@ -651,64 +641,55 @@ OP_2DROP
 // Following is a standard NFT contract
 OP_PUSHINPUTREFSINGLETON a32f3628a967ce64cca282262e63879136f9c3f4f8e1125345a85c71d90b10b401000000 OP_DROP
 OP_DUP OP_HASH160 3a23c6b9055b533db3900e4755dd58d1234c8582 OP_EQUALVERIFY OP_CHECKSIG</code></pre>
+              <p class="margin-top-sm">The mutability contract will verify that the hash of the provided unlocking script, along with the necessary <code>OP_REQUIREINPUTREF</code> are contained in the token UTXO.</p>
 
-                <p class="margin-top-sm">The mutability contract will verify that the hash of the provided unlocking script, along with the necessary <code>OP_REQUIREINPUTREF</code> are contained in the token UTXO.</p>
+              <h3 class="toc-h3" id="restoring-token-script" class="toc-content__target">Restoring token script</h3>
+              <p>An optional final step is for the token owner to restore the token script to a standard NFT contract that can be recognized by wallets. The <code>OP_REQUIREINPUTREF</code> and hash are no longer required.</p>
 
-                <h3 class="toc-h3" id="restoring-token-script" class="toc-content__target">Restoring token script</h3>
-                <p>An optional final step is for the token owner to restore the token script to a standard NFT contract that can be recognized by wallets. The <code>OP_REQUIREINPUTREF</code> and hash are no longer required.</p>
+              <h2 class="toc-h2" id="decentralized-mints" class="toc-content__target">Decentralized mints</h2>
+              <p>Decentralized mints (dmint) are mineable tokens that can be claimed by anyone using proof-of-work. These tokens are created with protocol <code>[1, 4]</code> and are locked in a layer one smart contract.</p>
 
-                <h2 class="toc-h2" id="decentralized-mints" class="toc-content__target">Decentralized mints</h2>
-                <p>Decentralized mints (dmint) are mineable tokens that can be claimed by anyone using proof-of-work. These tokens are created with protocol <code>[1, 4]</code> and are locked in a layer one smart contract.</p>
-
-                <h3 class="toc-h3" id="pow-algorithm" class="toc-content__target">PoW algorithm</h3>
-                <p>With a "pay to token" script, the mutability contract is always controlled by the token owner. This means every time a token is transferred to a new owMineable Glyphs use the follow proof-of-work algorithm:</p>
-                <pre class="code-snippet"><code>hash = sha256(sha256(
+              <h3 class="toc-h3" id="pow-algorithm" class="toc-content__target">PoW algorithm</h3>
+              <p>Mineable Glyphs use the following proof-of-work algorithm:</p>
+              <pre class="code-snippet"><code>hash = sha256(sha256(
     sha256(currentLocationTxid + contractRef) +
     sha256(anyInputHash + anyOutputHash) +
     nonce
 ))</code></pre>
+              <p class="margin-top-sm">Resulting hash must be below the target.</p>
+              <p><code>anyInputHash</code> and <code>anyOutputHash</code> must be the hash of any input or output in the transaction. This allows work to be bound to the miner's address and prevents nonces being stolen. This will typically be a pay-to-public-key-hash but any script can be used. The contract will verify these scripts exist.</p>
 
-                <p class="margin-top-sm">Resulting hash must be below the target.</p>
-                <p><code>anyInputHash</code> and <code>anyOutputHash</code> must be the hash of any input or output in the transaction. This allows work to be bound to the miner's address and prevents nonces being stolen. This will typically be a pay-to-public-key-hash but any script can be used. The contract will verify these scripts exist.</p>
+              <h2 class="toc-h2" id="electrumx" class="toc-content__target">ElectrumX</h2>
+              <p>Radiant's implementation of ElectrumX has modifications to support Glyphs.</p>
 
-                <h3 class="toc-h3" id="fetching-mutable-data" class="toc-content__target">Further information</h3>
-                <p>For more information including code for the mining smart contract see the <a href="https://github.com/RadiantBlockchain-Community/glyph-miner" target="_blank">Glyph Miner GitHub</a>.</p>
-                
+              <h3 class="toc-h3" id="querying" class="toc-content__target">Querying</h3>
+              <p>ElectrumX indexes each script with the ref zeroed out. The zeroed ref acts as a wildcard meaning a wallet can fetch all transactions for an address by using a ref with 36 zero bytes in the token script.</p>
+              <p>For example:</p>
+              <pre class="code-snippet"><code>OP_PUSHINPUTREFSINGLETON 000000000000000000000000000000000000000000000000000000000000000000000000 OP_DROP OP_DUP OP_HASH160 &lt;address&gt; OP_EQUALVERIFY OP_CHECKSIG</code></pre>
+              <p class="margin-top-sm">This script is hashed and can be used with <code>listunspent</code> and script hash subscriptions. This prevents having to perform many queries for each token ref or having to know token refs in advance.</p>
 
-                <h2 class="toc-h2" id="electrumx" class="toc-content__target">ElectrumX</h2>
-                <p>Radiant's implementation of ElectrumX has modifications to support Glyphs.</p>
+              <h3 class="toc-h3" id="ref-get" class="toc-content__target">Ref get</h3>
+              <p>A glyph ref will point to an outpoint in the commit transaction, therefore this alone cannot be used to fetch the token payload. To simplify this task, the <code>ref.get</code> method will return the first and last locations of a ref.</p>
+              <p>The first location will be the reveal transaction. The last location is used to track the current location of a contract.</p>
 
-                <h3 class="toc-h3" id="querying" class="toc-content__target">Querying</h3>
-                <p>ElectrumX indexes each script with the ref zeroed out. The zeroed ref acts as a wildcard meaning a wallet can fetch all transactions for an address by using a ref with 36 zero bytes in the token script.</p>
-                <p>For example:</p>
-                <pre class="code-snippet"><code>OP_PUSHINPUTREFSINGLETON 000000000000000000000000000000000000000000000000000000000000000000000000 OP_DROP OP_DUP OP_HASH160 &lt;address&gt; OP_EQUALVERIFY OP_CHECKSIG</code></pre>
+              <h3 class="toc-h3" id="list-unspent" class="toc-content__target">List unspent</h3>
+              <p>The <code>listunspent</code> method is improved to return an array of all refs contained in the script. Since refs are zeroed when querying for tokens, the wallet does not know the token ref in the returned UTXOs and would need to query each UTXO individually to determine the token.</p>
+              <p>With refs returned as part of the <code>listunspent</code> response, the wallet can build scripts without the additional queries.</p>
 
-                <p class="margin-top-sm">This script is hashed and can be used with <code>listunspent</code> and script hash subscriptions. This prevents having to perform many queries for each token ref or having to know token refs in advance.</p>
+              <br>
+              <hr>
+              <p>Guide documentation sourced from <a href="https://github.com/Radiant-Core/Glyph-Protocol-Tech-Guide" target="_blank">GitHub</a></p>
 
-                <h3 class="toc-h3" id="ref-get" class="toc-content__target">Ref get</h3>
-                <p>A glyph ref will point to an outpoint in the commit transaction, therefore this alone cannot be used to fetch the token payload. To simplify this task, the <code>ref.get</code> method will return the first and last locations of a ref.</p>
-                <p>The first location will be the reveal transaction. The last location is used to track the current location of a contract.</p>
-
-                <h3 class="toc-h3" id="list-unspent" class="toc-content__target">List unspent</h3>
-                <p>The <code>listunspent</code> method is improved to return an array of all refs contained in the script. Since refs are zeroed when querying for tokens, the wallet does not know the token ref in the returned UTXOs and would need to query each UTXO individually to determine the token.</p>
-                <p>With refs returned as part of the <code>listunspent</code> response, the wallet can build scripts without the additional queries.</p>
-
-                <br>
-                <hr>
-                <p>Guide documentation sourced from <a href="https://github.com/RadiantBlockchain-Community/glyphs-handbook/blob/master/src/README.md" target="_blank">GitHub</a></p>
-
-                <p>Further documentation about Glyph Token Standards can be found at <a href="https://github.com/Radiant-Core/Glyph-Token-Standards/tree/main" target="_blank">Radiant Core GitHub</a>:</p>
-                <ul>
-                    <li><a href="https://github.com/Radiant-Core/Glyph-Token-Standards/blob/main/Glyph_v1_Photonic_Implementation.md" target="_blank">Glyph v1 Token Standard - Photonic Wallet:</a> Implementation guide</li>
-                    <li><a href="https://github.com/Radiant-Core/Glyph-Token-Standards/blob/main/Glyph_v2_Token_Standard_Whitepaper.md" target="_blank">Glyph v2 - A Unified Token Standard for the Radiant Blockchain:</a> Technical whitepaper</li>
-                </ul>
-              </div>
-          </div>
-      </div>
-  </div>
-
-  </div>
-  <!-- end Guide content-->
+              <p>Further documentation about Glyph Token Standards can be found at <a href="https://github.com/Radiant-Core/Glyph-Token-Standards/tree/main" target="_blank">Radiant Core GitHub</a>:</p>
+              <ul>
+                  <li><a href="https://github.com/Radiant-Core/Glyph-Token-Standards/blob/main/Glyph_v1_Photonic_Implementation.md" target="_blank">Glyph v1 Token Standard - Photonic Wallet:</a> Implementation guide</li>
+                  <li><a href="https://github.com/Radiant-Core/Glyph-Token-Standards/blob/main/Glyph_v2_Token_Standard_Whitepaper.md" target="_blank">Glyph v2 - A Unified Token Standard for the Radiant Blockchain:</a> Technical whitepaper</li>
+              </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end Guide content -->
 
 </div> <!-- end Scroll progress -->
 
