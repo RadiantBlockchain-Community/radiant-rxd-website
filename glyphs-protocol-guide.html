@@ -444,7 +444,7 @@ OP_PUSH &lt;CBOR Payload&gt;</code></pre>
                 </table>
               </div>
 
-              <p class="margin-top-sm">IDs 1–5 are the v1 set; IDs 6–11 are defined in the Glyph v2 Token Standard. See the Glyph v2 Token Standard Whitepaper (§3.4 / Appendix A) for the authoritative registry. IDs 12–255 are reserved.</p>
+              <p class="margin-top-sm">IDs 1-5 are the v1 set; IDs 6-11 are defined in the Glyph v2 Token Standard. See the Glyph v2 Token Standard Whitepaper (§3.4 / Appendix A) for the authoritative registry. IDs 12-255 are reserved.</p>
               <p>Some protocols may depend on other protocols also being implemented. For example for a mineable token, a <code>p</code> value of <code>[1, 4]</code> must be used, indicating the token implements the FT and dmint contracts.</p>
 
               <h3 class="toc-h3" id="file-encoding" class="toc-content__target">File encoding</h3>
@@ -684,7 +684,6 @@ OP_DUP OP_HASH160 3a23c6b9055b533db3900e4755dd58d1234c8582 OP_EQUALVERIFY OP_CHE
               <p>The <code>listunspent</code> method is improved to return an array of all refs contained in the script. Since refs are zeroed when querying for tokens, the wallet does not know the token ref in the returned UTXOs and would need to query each UTXO individually to determine the token.</p>
               <p>With refs returned as part of the <code>listunspent</code> response, the wallet can build scripts without the additional queries.</p>
 
-              <!-- NEW SECTIONS ADDED AS REQUESTED -->
               <h2 class="toc-h2" id="further-information" class="toc-content__target">Further information</h2>
               <p>For more information including code for the mining smart contract see the Glyph Miner GitHub:</p>
               <ul class="margin-top-sm">
